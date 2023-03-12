@@ -22,7 +22,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'noto-sans': [400, 500, 600, 700]
+      'Inter': [400, 500, 600, 700],
     }
   }
 })
