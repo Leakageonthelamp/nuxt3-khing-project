@@ -4,6 +4,9 @@
       <h1 class="heading__title">
         Welcome to your new <span class="gradient__text">sidebase</span> app!
       </h1>
+      <h1 class="text-xl font-bold text-purple-300">
+        Khing Project เทสไทย
+      </h1>
       <p class="heading__credits">
         Read our documentation <a href="https://sidebase.io/sidebase/welcome" target="_blank">here</a>.
         Get started in no time with the following amazing modules:
