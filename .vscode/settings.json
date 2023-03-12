@@ -5,7 +5,7 @@
     "source.fixAll.eslint": true
   },
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
   "[js]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
