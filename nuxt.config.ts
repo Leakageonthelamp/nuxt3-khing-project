@@ -14,15 +14,9 @@ export default defineNuxtConfig({
     '@nuxt/devtools',
     '@pinia/nuxt',
     'nuxt-lodash',
-    '@nuxtjs/google-fonts',
   ],
   css: ['@/assets/main.scss'],
   typescript: {
     shim: false,
-  },
-  googleFonts: {
-    families: {
-      Inter: [400, 500, 600, 700],
-    },
   },
 })
