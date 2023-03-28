@@ -12,3 +12,6 @@ dist
 .vscode
 
 *.sqlite
+
+auto-imports.d.ts
+public/.DS_Store

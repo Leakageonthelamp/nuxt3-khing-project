@@ -5,6 +5,7 @@
         Welcome to your new <span class="gradient__text">sidebase</span> app! web
       </h1>
       <h1 class="text-xl font-bold text-purple-300">Khing Project เทสไทย</h1>
+      <TextComponent />
       <p class="heading__credits">
         Read our documentation
         <a href="https://sidebase.io/sidebase/welcome" target="_blank">here</a>. Get started in no
