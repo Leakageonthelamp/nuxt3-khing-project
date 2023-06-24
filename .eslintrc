@@ -2,15 +2,18 @@
   "root": true,
   "env": {
     "browser": true,
+    "es2021": true,
     "node": true
   },
   "parser": "vue-eslint-parser",
   "extends": [
+    "eslint:recommended",
     "standard-with-typescript",
     "plugin:nuxt/recommended",
     "plugin:vue/vue3-recommended",
-    "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "@nuxtjs/eslint-config-typescript",
+    "plugin:prettier/recommended"
   ],
   "overrides": [
     {
@@ -24,7 +27,8 @@
     }
   ],
   "plugins": [
-    "vue"
+    "vue",
+    "unused-imports"
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -32,9 +36,30 @@
     "parser": "@typescript-eslint/parser"
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-require-imports": "warn",
     "@typescript-eslint/no-explicit-any": "off",
     "dot-notation": "error",
-    "vue/multi-word-component-names": "off"
+    "vue/multi-word-component-names": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-empty-interface": "warn",
+    "@typescript-eslint/restrict-plus-operands": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "import/named": "off",
+    "import/namespace": "off",
+    "import/newline-after-import": "error",
+    "import/no-named-as-default-member": "off",
+    "unused-imports/no-unused-imports": "error",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "vue/html-self-closing": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ]
   }
 }
