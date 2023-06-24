@@ -80,18 +80,15 @@
     <div class="absolute w-[35%] aspect-square top-[-10%] left-[15%]">
       <div class="w-full h-full rounded-full aspect-square cursor-pointer relative">
         <div class="absolute inset-0 hover:opacity-0 transition-opacity duration-1000">
-          <img
-            class="w-full h-full object-contain"
-            src="images/homepage/cover-img.png"
-            alt="cover"
-          />
+          <img class="w-full h-full object-contain" :src="hiddenImage" alt="cover" />
         </div>
-        <img
-          class="w-full h-full object-contain"
-          src="images/homepage/profile-img.png"
-          alt="profile"
-        />
+        <img class="w-full h-full object-contain" :src="profileImage" alt="profile" />
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const hiddenImage = ref<string>('/images/homepage/profile-hidden.png')
+const profileImage = ref<string>('/images/homepage/profile-img.png')
+</script>
