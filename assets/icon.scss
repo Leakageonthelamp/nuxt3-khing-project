@@ -1,0 +1,27 @@
+@mixin icon($name, $svg) {
+    &.ic-#{$name} {
+        -webkit-mask: url("data:image/svg+xml;utf8,#{$svg}") 0 0 / contain;
+        -webkit-mask-repeat: no-repeat;
+    }
+}
+
+.ic {
+    display: inline-block;
+    width: 1rem;
+    background: currentcolor;
+
+    &::before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    @include icon(
+        "arrow-up-right",
+        '<svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 16 16 1H1M16 1v15"/></svg>'
+    );
+    @include icon(
+        "chevron-up",
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>'
+    );
+}

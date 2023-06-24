@@ -1,4 +1,4 @@
 export const CONFIG = {
-  APP_TITLE: 'ginner | UXUI Portfolio',
-  APP_PAGE_PREFIX: 'ginner',
+  APP_TITLE: 'ginger | UXUI Portfolio',
+  APP_PAGE_PREFIX: 'ginger',
 }
