@@ -1,15 +1,18 @@
 <template>
   <div class="project-selection">
-    <div class="grid grid-cols-12">
-      <div class="w-full h-full col-start-1 col-end-6">
-        <Transition name="slide-right" mode="out-in">
-          <img
-            :key="currentProjectImg"
-            class="w-full h-full object-contain"
-            :src="currentProjectImg || '/images/homepage/none.png'"
-            alt="preview"
-          />
-        </Transition>
+    <div class="grid grid-cols-12 items-center">
+      <div class="w-full h-full col-start-1 col-end-6 relative">
+        <div class="w-full h-full absolute inset-0 flex items-center">
+          <Transition name="slide-right" mode="out-in">
+            <img
+              :key="currentProjectImg"
+              class=""
+              :src="currentProjectImg || '/images/homepage/none.png'"
+              alt="preview"
+            />
+          </Transition>
+        </div>
+        <div class="w-full h-full bg-transparent" />
       </div>
       <div class="col-start-7 col-end-12">
         <h1 class="text-5xl font-light border-b-2 border-dark py-4">Work</h1>

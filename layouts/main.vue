@@ -36,11 +36,11 @@ const navbarInfo = ref({
 
 <style lang="scss" scoped>
 .navbar {
-  @apply px-[142px] py-[34px] fixed w-full bg-white/10 backdrop-blur z-10;
+  @apply px-36 py-8 fixed w-full bg-white/10 backdrop-blur z-[100];
   @apply flex justify-between items-center;
 }
 
 .footer {
-  @apply absolute bottom-0 bg-transparent w-full text-center py-6 z-10;
+  @apply absolute bottom-0 bg-transparent w-full text-center py-6 z-[100];
 }
 </style>

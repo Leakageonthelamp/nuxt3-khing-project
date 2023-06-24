@@ -16,11 +16,18 @@ import HomePage from '~/features/Homepage/index.vue';
         <h2 class="text-[48px]">I’m UX<span class="text-secondary">/UI</span> Designer</h2>
       </div>
     </div>
-    <div class="homepage-body">
-      <img class="w-full object-cover" src="/images/homepage/main-bg.png" alt="main-body-bg" />
+    <div
+      class="homepage-body bg-cover bg-no-repeat bg-center"
+      style="background-image: url(/images/homepage/main-bg.png)"
+    >
       <div class="body-section">
-        <HomeProjectSelection class="my-40" />
-        <HomeAboutMe />
+        <section class="py-40">
+          <HomeProjectSelection />
+        </section>
+        <section class="py-60">
+          <HomeAboutMe />
+        </section>
+        <HomeContactMe />
       </div>
     </div>
   </div>
@@ -32,13 +39,6 @@ import HomePage from '~/features/Homepage/index.vue';
 .homepage {
   .header {
     @apply relative;
-  }
-
-  .homepage-body {
-    @apply relative;
-    .body-section {
-      @apply absolute inset-0;
-    }
   }
 }
 </style>
