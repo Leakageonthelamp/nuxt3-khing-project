@@ -4,7 +4,8 @@
   "compilerOptions": {
     "useUnknownInCatchVariables": false,
     "types": [
-      "@nuxt/types"
+      "@nuxt/types",
+      "vitest/globals"
     ]
   },
   "exclude": [

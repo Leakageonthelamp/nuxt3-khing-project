@@ -1,0 +1,46 @@
+<template>
+  <div class="main-layout relative">
+    <div class="navbar">
+      <nuxt-link to="/">
+        <h1 class="text-2xl font-bold text-primary">{{ navbarInfo.title }}</h1>
+      </nuxt-link>
+      <div class="flex space-x-16">
+        <nuxt-link v-for="(link, index) in navbarInfo.links" :key="index" :to="link.href">
+          <p class="text-2xl font-light hover:underline underline-offset-4 hover:text-primary">
+            {{ link.name }}
+          </p>
+        </nuxt-link>
+      </div>
+    </div>
+    <main>
+      <slot />
+    </main>
+    <div class="footer">
+      <h5 class="text-secondary">© ginger kotchagorn 2023</h5>
+    </div>
+  </div>
+</template>
+
+<script lang="tsx" setup>
+import { ref } from '#imports'
+
+const navbarInfo = ref({
+  title: 'ginger',
+  links: [
+    { name: 'works', href: '/works' },
+    { name: 'about', href: '/about' },
+    { name: 'contact', href: '/contact' },
+  ],
+})
+</script>
+
+<style lang="scss" scoped>
+.navbar {
+  @apply px-[142px] py-[34px] fixed w-full bg-white/10 backdrop-blur z-10;
+  @apply flex justify-between items-center;
+}
+
+.footer {
+  @apply absolute bottom-0 bg-transparent w-full text-center py-6 z-10;
+}
+</style>
