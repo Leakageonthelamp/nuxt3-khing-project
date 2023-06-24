@@ -1,12 +1,12 @@
 <template>
   <div class="project-selection">
-    <div class="grid grid-cols-12 items-center">
+    <div class="grid grid-cols-12">
       <div class="w-full h-full col-start-1 col-end-6">
         <Transition name="slide-right" mode="out-in">
           <img
             :key="currentProjectImg"
-            class="w-full object-contain"
-            :src="currentProjectImg"
+            class="w-full h-full object-contain"
+            :src="currentProjectImg || '/images/homepage/none.png'"
             alt="preview"
           />
         </Transition>

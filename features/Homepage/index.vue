@@ -20,6 +20,7 @@ import HomePage from '~/features/Homepage/index.vue';
       <img class="w-full object-cover" src="/images/homepage/main-bg.png" alt="main-body-bg" />
       <div class="body-section">
         <HomeProjectSelection class="my-40" />
+        <HomeAboutMe />
       </div>
     </div>
   </div>
