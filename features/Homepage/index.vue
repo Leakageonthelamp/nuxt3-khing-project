@@ -22,12 +22,12 @@ import HomePage from '~/features/Homepage/index.vue';
     >
       <div class="body-section">
         <section class="py-40">
-          <HomeProjectSelection />
+          <HomeProjectSelection id="works" />
         </section>
         <section class="py-60">
-          <HomeAboutMe />
+          <HomeAboutMe id="about" />
         </section>
-        <HomeContactMe />
+        <HomeContactMe id="contact" />
       </div>
     </div>
   </div>

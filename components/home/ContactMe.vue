@@ -3,7 +3,11 @@
     <div class="text-secondary">
       <h1 class="font-medium text-[96px]">Hope to see you agian!</h1>
       <div class="flex items-center space-x-2">
-        <p class="text-3xl underline hover:text-primary cursor-pointer">resume</p>
+        <p
+          class="text-3xl link-underline link-underline--secondary hover:text-primary cursor-pointer"
+        >
+          resume
+        </p>
         <em class="ic ic-arrow-up-right w-4" />
       </div>
     </div>
@@ -11,7 +15,7 @@
       <a
         href="https://www.linkedin.com/in/kotchagorn-angchuan"
         target="_blank"
-        class="underline hover:text-primary"
+        class="link-underline link-underline--primary w-fit hover:text-primary"
       >
         linkedin
       </a>
