@@ -15,9 +15,9 @@
     "@nuxt/devtools": "^0.2.5",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@sidebase/nuxt-auth": "^0.4.3",
     "@tailwindcss/forms": "^0.5.3",
     "@tailwindcss/typography": "^0.5.9",
-    "@sidebase/nuxt-auth": "^0.4.3",
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
@@ -46,6 +46,7 @@
     "next-auth": "^4.18.8",
     "nuxt-lodash": "^2.4.1",
     "pinia": "^2.0.33",
-    "sass": "^1.59.2"
+    "sass": "^1.59.2",
+    "vue-scrollto": "^2.20.0"
   }
 }

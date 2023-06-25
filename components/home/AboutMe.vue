@@ -29,7 +29,7 @@
               <a
                 href="https://www.touchtechnologies.co.th"
                 target="_blank"
-                class="underline hover:text-primary"
+                class="link-underline link-underline--primary hover:text-primary"
               >
                 Touch technology
               </a>
@@ -45,7 +45,9 @@
           <div>
             <h2 class="text-2xl font-medium">2021 - graduate</h2>
             <a href="https://www.3dbcd.com" target="_blank">
-              <h5 class="text-secondary font-medium text-xl mb-4 underline hover:text-primary">
+              <h5
+                class="text-secondary font-medium text-xl mb-4 link-underline link-underline--primary hover:text-primary"
+              >
                 3D-Based Communication Design & Integrated Media, KMITL
               </h5>
             </a>
@@ -62,7 +64,7 @@
               <a
                 href="https://www.wongnai.com"
                 target="_blank"
-                class="underline hover:text-primary"
+                class="link-underline link-underline--primary hover:text-primary"
               >
                 Lineman wongnai
               </a>

@@ -5,11 +5,16 @@
         <h1 class="text-2xl font-bold text-primary">{{ navbarInfo.title }}</h1>
       </nuxt-link>
       <div class="flex space-x-16">
-        <nuxt-link v-for="(link, index) in navbarInfo.links" :key="index" :to="link.href">
-          <p class="text-2xl font-light hover:underline underline-offset-4 hover:text-primary">
+        <a
+          v-for="(link, index) in navbarInfo.links"
+          :key="index"
+          v-scroll-to="`#${link.name}`"
+          href="#"
+        >
+          <p class="text-2xl font-light link-underline link-underline--primary hover:text-primary">
             {{ link.name }}
           </p>
-        </nuxt-link>
+        </a>
       </div>
     </div>
     <main>

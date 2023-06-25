@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { CONFIG } from '~/constants/config.const'
-import { computed, getCurrentInstance, ref, useHead } from '#imports'
+import { ref, useHead } from '#imports'
 
 export interface IDocMeta {
   title?: string
@@ -27,15 +27,15 @@ export interface IApp {
   pageMeta: IPageMeta
 }
 
-export const wrapProperty =
-  (property: string, makeComputed = true) =>
-  () => {
-    const vm: any = getCurrentInstance()?.proxy
+// export const wrapProperty =
+//   (property: string, makeComputed = true) =>
+//   () => {
+//     const vm: any = getCurrentInstance()?.proxy
 
-    return makeComputed ? computed(() => vm[property]) : vm[property]
-  }
+//     return makeComputed ? computed(() => vm[property]) : vm[property]
+//   }
 
-export const useScrollTo: () => any = wrapProperty('$scrollTo', false)
+// export const useScrollTo: () => any = wrapProperty('$scrollTo', false)
 
 export const useApp: () => IApp = defineStore('_app', () => {
   const pageMeta = ref<IPageMeta>({ title: CONFIG.APP_TITLE })
