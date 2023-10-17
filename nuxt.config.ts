@@ -59,13 +59,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@sidebase/nuxt-auth',
-    '@nuxt/devtools',
-    '@pinia/nuxt',
-    'nuxt-lodash',
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-lodash', '@nuxt/image'],
 
   css: ['@/assets/main.scss'],
 

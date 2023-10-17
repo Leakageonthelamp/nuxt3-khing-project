@@ -2,10 +2,13 @@ import HomePage from '~/features/Homepage/index.vue';
 <template>
   <div class="homepage">
     <div class="header">
-      <img
+      <nuxt-img
         class="w-full h-screen object-cover"
         src="/images/homepage/header.png"
         alt="homepage-header"
+        loading="lazy"
+        preload
+        placeholder
       />
       <div class="absolute inset-0 flex flex-col text-center justify-center items-center">
         <h1 class="text-secondary text-[96px] font-bold">hello :)</h1>
