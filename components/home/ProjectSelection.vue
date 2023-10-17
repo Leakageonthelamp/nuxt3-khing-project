@@ -4,11 +4,14 @@
       <div class="w-full h-full col-start-1 col-end-6 relative">
         <div class="w-full h-full absolute inset-0 flex items-center">
           <Transition name="slide-right" mode="out-in">
-            <img
+            <nuxt-img
               :key="currentProjectImg"
               class=""
               :src="currentProjectImg || '/images/homepage/none.png'"
               alt="preview"
+              loading="lazy"
+              preload
+              placeholder
             />
           </Transition>
         </div>

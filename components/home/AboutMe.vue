@@ -82,9 +82,23 @@
     <div class="absolute w-[35%] aspect-square top-[-10%] left-[15%]">
       <div class="w-full h-full rounded-full aspect-square cursor-pointer relative">
         <div class="absolute inset-0 hover:opacity-0 transition-opacity duration-1000">
-          <img class="w-full h-full object-contain" :src="hiddenImage" alt="cover" />
+          <nuxt-img
+            class="w-full h-full object-contain"
+            :src="hiddenImage"
+            alt="cover"
+            loading="lazy"
+            preload
+            placeholder
+          />
         </div>
-        <img class="w-full h-full object-contain" :src="profileImage" alt="profile" />
+        <nuxt-img
+          class="w-full h-full object-contain"
+          :src="profileImage"
+          alt="profile"
+          loading="lazy"
+          preload
+          placeholder
+        />
       </div>
     </div>
   </div>
