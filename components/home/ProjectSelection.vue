@@ -8,6 +8,7 @@
               :key="currentProjectImg"
               :src="currentProjectImg || '/images/homepage/none.png'"
               alt="preview"
+              loading="lazy"
             />
           </Transition>
         </div>
