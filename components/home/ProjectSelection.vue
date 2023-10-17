@@ -6,11 +6,8 @@
           <Transition name="slide-right" mode="out-in">
             <nuxt-img
               :key="currentProjectImg"
-              class=""
               :src="currentProjectImg || '/images/homepage/none.png'"
               alt="preview"
-              loading="lazy"
-              placeholder
             />
           </Transition>
         </div>
