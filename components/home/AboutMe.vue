@@ -87,7 +87,6 @@
             :src="hiddenImage"
             alt="cover"
             loading="lazy"
-            preload
             placeholder
           />
         </div>
@@ -96,7 +95,6 @@
           :src="profileImage"
           alt="profile"
           loading="lazy"
-          preload
           placeholder
         />
       </div>
