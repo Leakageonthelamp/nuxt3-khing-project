@@ -10,7 +10,6 @@
               :src="currentProjectImg || '/images/homepage/none.png'"
               alt="preview"
               loading="lazy"
-              preload
               placeholder
             />
           </Transition>

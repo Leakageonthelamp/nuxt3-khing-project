@@ -7,7 +7,6 @@ import HomePage from '~/features/Homepage/index.vue';
         src="/images/homepage/header.png"
         alt="homepage-header"
         loading="lazy"
-        preload
         placeholder
       />
       <div class="absolute inset-0 flex flex-col text-center justify-center items-center">
