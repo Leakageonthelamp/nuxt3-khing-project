@@ -4,7 +4,7 @@
       <div class="w-full h-full col-start-1 col-end-6 relative">
         <div class="w-full h-full absolute inset-0 flex items-center">
           <Transition name="slide-right" mode="out-in">
-            <nuxt-img
+            <img
               :key="currentProjectImg"
               :src="currentProjectImg || '/images/homepage/none.png'"
               alt="preview"
