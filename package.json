@@ -27,6 +27,7 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "eslint-plugin-vue": "^9.9.0",
     "nuxt": "^3.9.0",
+    "nuxt-icon": "^0.6.8",
     "postcss-custom-properties": "^13.2.0",
     "prettier": "^2.8.4",
     "prisma": "^4.11.0",
@@ -46,6 +47,7 @@
     "nuxt-lodash": "^2.4.1",
     "pinia": "^2.0.33",
     "sass": "^1.59.2",
-    "vue-scrollto": "^2.20.0"
+    "vue-scrollto": "^2.20.0",
+    "vue3-carousel-nuxt": "^1.1.0"
   }
 }

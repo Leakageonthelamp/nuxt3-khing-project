@@ -20,44 +20,13 @@ body,
     @apply h-full bg-light text-dark font-light;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-    transition: all 0.2s;
-}
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-    filter: blur(1rem);
-}
-
-.layout-enter-active,
-.layout-leave-active {
-    transition: all 0.4s;
-}
-.layout-enter-from,
-.layout-leave-to {
-    filter: grayscale(1);
-}
-
-.slide-left-enter-active,
-.slide-left-leave-active,
-.slide-right-enter-active,
-.slide-right-leave-active {
-    transition: all 0.2s;
-}
-.slide-left-enter-from {
-    opacity: 0;
-    transform: translate(50px, 0);
-}
-.slide-left-leave-to {
-    opacity: 0;
-    transform: translate(-50px, 0);
-}
-.slide-right-enter-from {
-    opacity: 0;
-    transform: translate(-50px, 0);
-}
-.slide-right-leave-to {
-    opacity: 0;
-    transform: translate(-50px, 0);
+.fold-tr-corner {
+    @apply relative;
+    background: linear-gradient(-135deg, transparent 50px, #a1aece 0);
+    &:before {
+        @apply absolute top-0 right-0;
+        content: "";
+        border-bottom: 70px solid #7c7190;
+        border-right: 70px solid transparent;
+    }
 }

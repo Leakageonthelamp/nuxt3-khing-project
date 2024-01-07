@@ -8,8 +8,8 @@
         <a
           v-for="(link, index) in navbarInfo.links"
           :key="index"
-          v-scroll-to="`#${link.name}`"
           href="#"
+          @click="handleNavigate(link.name)"
         >
           <p class="text-2xl font-light link-underline link-underline--primary hover:text-primary">
             {{ link.name }}
@@ -21,13 +21,17 @@
       <slot />
     </main>
     <div class="footer">
-      <h5 class="text-secondary">© ginger kotchagorn 2023</h5>
+      <h5 class="text-secondary">© ginger kotchagorn 2024</h5>
     </div>
   </div>
 </template>
 
 <script lang="tsx" setup>
+import VueScrollTo from 'vue-scrollto'
 import { ref } from '#imports'
+
+const app = useApp()
+const router = useRouter()
 
 const navbarInfo = ref({
   title: 'ginger',
@@ -37,6 +41,17 @@ const navbarInfo = ref({
     { name: 'contact', href: '/contact' },
   ],
 })
+
+const handleNavigate = (slug: string) => {
+  if (app.pageMeta.title === 'main') {
+    VueScrollTo.scrollTo(`#${slug}`, 500, { offset: -100 })
+  } else {
+    router.push(`/`)
+    setTimeout(() => {
+      VueScrollTo.scrollTo(`#${slug}`, 500, { offset: -100 })
+    }, 500)
+  }
+}
 </script>
 
 <style lang="scss" scoped>

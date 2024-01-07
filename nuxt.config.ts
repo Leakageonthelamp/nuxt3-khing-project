@@ -59,7 +59,14 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', 'nuxt-lodash', '@nuxt/image'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    'nuxt-lodash',
+    '@nuxt/image',
+    'nuxt-icon',
+    'vue3-carousel-nuxt',
+  ],
 
   css: ['@/assets/main.scss'],
 
