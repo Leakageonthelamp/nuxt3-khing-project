@@ -2,30 +2,21 @@
   <div class="about-me relative">
     <div class="wrapper grid grid-cols-12 tracking-normal">
       <div class="col-start-6 col-end-11 z-10">
-        <div class="heading w-[50%]">
-          <h1 class="text-4xl font-normal mb-10">About me</h1>
-          <p class="text-secondary">
-            cooking enthusiast, gamer and food lover,<br />
-            love discovering new experiences for my eyes,<br />
-            knowledge, and tongue every weekday.
+        <div class="heading mb-20">
+          <h1 class="text-[48px] font-normal">About me</h1>
+          <p class="my-4">kotchagorn angchuan | bangkok, Thailand</p>
+          <p class="text-primary font-normal">
+            Weekday adventurer (eyes, brain, tastebuds!), culinary explorer, and gamer. These
+            passions help me to create UX that telling engaging stories through human-centered
+            design solutions.
           </p>
         </div>
-        <div class="description mt-20 mb-32">
-          <p class="text-xl break-words">
-            My colleague describes me as cheerful attitude and adaptability, as well as my ability
-            to work efficiently and effectively. I have a passion for understanding the people and
-            using my empathy to find solutions to their problems. Made bridge between product and
-            user for the best experience use.
-          </p>
-          <p class="text-xl mt-16 break-words text-primary">
-            l am currently seeking full-time opportunities in UX and UX/UI position both in hybrid
-            and remote work.
-          </p>
-        </div>
-        <div class="exp flex flex-col space-y-16">
+        <div class="flex flex-col space-y-16">
           <div>
-            <h2 class="text-2xl font-medium">2022 - now</h2>
-            <h5 class="text-secondary font-medium text-xl mb-4">
+            <h2 class="text-xl font-thin">
+              2022.03 - Present <span class="text-secondary"> · 2 yr</span>
+            </h2>
+            <h5 class="font-medium text-2xl mb-4">
               <a
                 href="https://www.touchtechnologies.co.th"
                 target="_blank"
@@ -33,48 +24,90 @@
               >
                 Touch technology
               </a>
-              - 1y 10m
+              | UX Designer
             </h5>
-            <p>
-              Research, interviews, and stakeholder engagement to understand the needs of the target
-              audience. Using design thinking methods, I summarize information and create flowcharts
-              and wireframes for usability testing, as well as to effectively communicate with
-              developers and ensure a seamless collaboration in implementing the final UI design.
-            </p>
+            <ul class="list-disc pl-6">
+              <li>
+                Contributed to user-centric interfaces for innovative health tech and smart city 20+
+                projects.
+              </li>
+              <li>
+                Research and empathizing with users, crafting user journeys, defining insights to
+                connect product with user.
+              </li>
+              <li>
+                Designed detailed flows, wireframes, UX writing, and interactive prototypes for use
+                in usability testing. and refined designs based on user feedback.
+              </li>
+            </ul>
           </div>
+
           <div>
-            <h2 class="text-2xl font-medium">2021 - graduate</h2>
-            <a href="https://www.3dbcd.com" target="_blank">
-              <h5
-                class="text-secondary font-medium text-xl mb-4 link-underline link-underline--primary hover:text-primary"
-              >
-                3D-Based Communication Design & Integrated Media, KMITL
-              </h5>
-            </a>
-            <p>
-              Communication and Media Design that Enhancing User Experience with Creative and Design
-              Thinking. study and practice for designing 3D-based media, integrated media,
-              object-based media in both physical and digital space to convey a meaningful
-              experience to users.
-            </p>
-          </div>
-          <div>
-            <h2 class="text-2xl font-medium">2020 - join internship</h2>
-            <h5 class="text-secondary font-medium text-xl mb-4">
+            <h2 class="text-xl font-thin">
+              2020.06 - 2020.08 <span class="text-secondary"> · 2 mos</span>
+            </h2>
+            <h5 class="font-medium text-2xl mb-4">
               <a
-                href="https://www.wongnai.com"
+                href="https://www.touchtechnologies.co.th"
                 target="_blank"
                 class="link-underline link-underline--primary hover:text-primary"
               >
-                Lineman wongnai
+                Wongnai
               </a>
-              - 2m
+              | UX/UI Designer <span class="text-secondary">Internship</span>
             </h5>
-            <p>
-              My responsibility is to ensure a seamless user experience through user interaction and
-              research to implement the best designs for the Wongnai platform.
-            </p>
+            <ul class="list-disc pl-6">
+              <li>
+                Contributed to the design of UI for the Wongnai platform, including app and website
+                flows.
+              </li>
+              <li>
+                Conducted user research and collected data from 5 restaurants and spas to identify
+                pain points and insights for the development of Wongnai's POS product.
+              </li>
+              <li>
+                Collaborated with cross-functional teams to present work and provide design review
+                and critical feedback.
+              </li>
+            </ul>
           </div>
+
+          <div>
+            <h2 class="text-xl font-thin">
+              2017 - 2021 <span class="text-secondary"> · 4 yr (2 yr of UX project)</span>
+            </h2>
+            <h5 class="font-medium text-2xl mb-4">
+              <a
+                href="https://www.touchtechnologies.co.th"
+                target="_blank"
+                class="link-underline link-underline--primary hover:text-primary"
+              >
+                KMITL
+              </a>
+              | Bachelor's Degree <span class="text-secondary">First Class Honors</span>
+            </h5>
+            <h5 class="mb-4">
+              School of Architecture, Art, and Design
+              <p class="text-secondary">3D-Based Communication Design & Integrated Media</p>
+            </h5>
+            <ul class="list-disc pl-6">
+              <li>
+                Skilled in design thinking and human-centered design to create impactful user
+                experiences across a variety of media, including interaction, exhibition,
+                object-based, and service design.
+              </li>
+              <li>
+                Designed 6+ projects across apps (thesis & 2 others), service design ,exhibitions,
+                and physical experiences like product, toys & eating and more.
+              </li>
+            </ul>
+          </div>
+
+          <h5 class="text-secondary font-medium text-xl">
+            I'm a passionate designer fueled by cheer and adaptability. I bridge the gap between
+            products and people, crafting experiences that bridge the gap between products and users
+            that make them smile :)
+          </h5>
         </div>
       </div>
     </div>
