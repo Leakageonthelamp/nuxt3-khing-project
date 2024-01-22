@@ -70,9 +70,34 @@
           </section>
 
           <section id="ideate">
-            <Ideate />
+            <Ideate @active-section="handleIdeateActiveSection" />
+          </section>
+
+          <section id="wireframe">
+            <Wireframe @active-section="handleIdeateActiveSection" />
+          </section>
+
+          <section id="final">
+            <Final />
+          </section>
+
+          <section id="outcome">
+            <Outcome />
           </section>
         </div>
+      </div>
+
+      <div class="w-full flex items-center justify-center pb-20">
+        <p>If you like this project, <span class="text-2xl text-primary">contact me!</span></p>
+      </div>
+    </div>
+
+    <div v-for="(list, index) in sideNavigateList" :key="index" class="fixed bottom-16 left-24">
+      <div
+        :id="list.id"
+        :class="['transition duration-500', list.isActive ? 'opacity-100' : 'opacity-0']"
+      >
+        <SideNavigate :title="list.title" :sub-title="list.subtitle" :to="list.to" />
       </div>
     </div>
   </div>
@@ -83,6 +108,11 @@ import ProjectOverview from '~/components/totiw/ProjectOverview.vue'
 import Research from '~/components/totiw/Research.vue'
 import Define from '~/components/totiw/Define.vue'
 import Ideate from '~/components/totiw/Ideate.vue'
+import Wireframe from '~/components/totiw/Wireframe.vue'
+import Final from '~/components/totiw/Final.vue'
+import Outcome from '~/components/totiw/Outcome.vue'
+
+import SideNavigate from '~/components/totiw/SideNavigate.vue'
 
 const navigationList = ref([
   {
@@ -127,6 +157,37 @@ const navigationList = ref([
   },
 ])
 
+const sideNavigateList = ref([
+  {
+    id: 'main',
+    title: 'Information Architecture',
+    subtitle: 'figjam',
+    to: 'https://www.figma.com/file/9iTdNcXe9CjSBlqdkjFRnO/Untitled?node-id=0:1',
+    isActive: false,
+  },
+  {
+    id: 'flow',
+    title: 'Full Size Flowchart',
+    subtitle: 'pdf',
+    to: '',
+    isActive: false,
+  },
+  {
+    id: 'concept',
+    title: 'Full Size Mood Board',
+    subtitle: 'pdf',
+    to: '',
+    isActive: false,
+  },
+  {
+    id: 'wireframe',
+    title: 'Wireframe',
+    subtitle: 'figma',
+    to: '',
+    isActive: false,
+  },
+])
+
 onMounted(() => {
   activeIntersection()
 })
@@ -151,6 +212,10 @@ const activeIntersection = () => {
           }
         })
       }
+
+      if (currentIntersection.value !== 'ideate' && currentIntersection.value !== 'wireframe') {
+        resetIdeateActiveSection()
+      }
     })
   }
 
@@ -160,16 +225,32 @@ const activeIntersection = () => {
   })
   const observerLong = new IntersectionObserver(callback, {
     rootMargin: '0px',
-    threshold: 0.25,
+    threshold: 0.2,
   })
 
   const sections = document.querySelectorAll('#projectObserver > section')
   sections.forEach((section) => {
-    if (section.id === 'define') {
+    if (section.id === 'define' || section.id === 'ideate') {
       observerLong.observe(section)
     } else {
       observerShot.observe(section)
     }
+  })
+}
+
+const handleIdeateActiveSection = (id: string) => {
+  sideNavigateList.value.forEach((item) => {
+    if (item.id === id) {
+      item.isActive = true
+    } else {
+      item.isActive = false
+    }
+  })
+}
+
+const resetIdeateActiveSection = () => {
+  sideNavigateList.value.forEach((item) => {
+    item.isActive = false
   })
 }
 </script>
