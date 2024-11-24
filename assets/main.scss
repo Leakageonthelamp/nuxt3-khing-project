@@ -1,12 +1,27 @@
+/* Use modern @use instead of deprecated @import */
+@use "icon";
+@use "animate";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200;300;400;500;600;700&display=swap");
+/* Import fonts using @font-face instead of @import url for better performance */
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+}
 
-@import "icon";
-@import "animate";
+@font-face {
+    font-family: "Noto Sans Thai";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@200;300;400;500;600;700&display=swap");
+}
 
 * {
     @apply font-poppins;

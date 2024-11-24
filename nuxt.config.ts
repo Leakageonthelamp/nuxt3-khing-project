@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 import { CONFIG } from './constants/config.const'
 
 export default defineNuxtConfig({
@@ -6,15 +5,18 @@ export default defineNuxtConfig({
     writeEarlyHints: true,
     payloadExtraction: false,
   },
+
   components: [
     {
       path: '~/components',
       extensions: ['vue'],
     },
   ],
+
   imports: {
     dirs: ['hooks'],
   },
+
   app: {
     head: {
       title: CONFIG.APP_TITLE,
@@ -59,21 +61,31 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'nuxt-lodash',
     '@nuxt/image',
-    'nuxt-icon',
+    '@nuxt/icon',
     'vue3-carousel-nuxt',
   ],
 
   css: ['@/assets/main.scss'],
 
-  typescript: {
-    shim: false,
-  },
   devtools: {
     enabled: true,
   },
+
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
+    },
+  },
+
+  compatibilityDate: '2024-11-24',
 })
