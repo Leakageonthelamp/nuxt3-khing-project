@@ -50,7 +50,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --immutable --immutable-cache --check-cache
       - name: Static HTML export with Nuxt
         run: yarn generate
       - name: Upload artifact
