@@ -1,7 +1,6 @@
 import { CONFIG } from './constants/config.const'
 
 export default defineNuxtConfig({
-  ssr: false,
   experimental: {
     writeEarlyHints: true,
     payloadExtraction: false,
@@ -70,7 +69,7 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     '@nuxt/icon',
     'vue3-carousel-nuxt',
-    ['@nuxt/image', { provide: 'static' }],
+    '@nuxt/image',
   ],
 
   css: ['@/assets/main.scss'],
