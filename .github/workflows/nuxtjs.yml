@@ -51,10 +51,10 @@ jobs:
             ${{ runner.os }}-nuxt-build-
       - name: Install dependencies
         run: yarn install
+      - name: Install @nuxt/image
+        run: yarn add @nuxt/image -D
       - name: Static HTML export with Nuxt
         run: yarn generate
-        env:
-          NITRO_PRESET: github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
