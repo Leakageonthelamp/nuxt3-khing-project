@@ -1,12 +1,12 @@
 <template>
   <div class="homepage">
     <div class="header">
-      <NuxtImg
+      <img
         class="w-full h-screen object-cover"
         src="/images/homepage/header.png"
         alt="homepage-header"
         loading="lazy"
-        placeholder
+        placeholder="blur"
       />
       <div class="absolute inset-0 flex flex-col pt-40 2xl:pt-52 px-20 2xl:px-40 pb-14 2xl:pb-24">
         <h1 class="text-secondary text-[72px] 2xl:text-[96px] font-medium">Hey There !</h1>

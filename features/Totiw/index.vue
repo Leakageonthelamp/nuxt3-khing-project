@@ -1,12 +1,12 @@
 <template>
   <div class="totiw-page">
     <div class="header">
-      <nuxt-img
+      <img
         class="w-full h-screen object-cover"
         src="/images/totiw/header.png"
         alt="totiw-header"
         loading="lazy"
-        placeholder
+        placeholder="blur"
       />
       <div
         class="absolute inset-0 flex flex-col-reverse lg:grid lg:grid-cols-2 gap-4 px-10 lg:px-40"
@@ -25,12 +25,12 @@
           </p>
         </div>
         <div class="flex items-center justify-center pt-30">
-          <nuxt-img
+          <img
             class="w-full object-contain"
             src="/images/totiw/header-pic.png"
             alt="header-pic"
             loading="lazy"
-            placeholder
+            placeholder="blur"
           />
         </div>
       </div>
