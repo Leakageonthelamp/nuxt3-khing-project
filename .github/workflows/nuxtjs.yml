@@ -53,6 +53,8 @@ jobs:
         run: yarn install
       - name: Static HTML export with Nuxt
         run: yarn generate
+        env:
+          NITRO_PRESET: github_pages
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

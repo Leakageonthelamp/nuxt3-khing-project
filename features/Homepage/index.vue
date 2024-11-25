@@ -1,7 +1,7 @@
 <template>
   <div class="homepage">
     <div class="header">
-      <nuxt-img
+      <NuxtImg
         class="w-full h-screen object-cover"
         src="/images/homepage/header.png"
         alt="homepage-header"
