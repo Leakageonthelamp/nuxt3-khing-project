@@ -64,6 +64,10 @@ export default defineNuxtConfig({
     },
   },
 
+  build: {
+    transpile: ['@nuxt/image'],
+  },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
