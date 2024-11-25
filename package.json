@@ -9,10 +9,11 @@
     "lint": "eslint --max-warnings 0 .",
     "lint:fix": "eslint --fix .",
     "typecheck": "nuxt typecheck",
-    "start": "NODE_ENV=production node .output/server/index.mjs"
+    "start": "NODE_ENV=production node .output/public/index.mjs"
   },
   "devDependencies": {
     "@nuxt/icon": "^1.8.2",
+    "@nuxt/image": "^1.8.1",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
     "@tailwindcss/forms": "^0.5.9",
@@ -39,7 +40,6 @@
     "vue-tsc": "^2.1.10"
   },
   "dependencies": {
-    "@nuxt/image": "^1.8.1",
     "@nuxt/types": "^2.18.1",
     "@pinia/nuxt": "^0.7.0",
     "@vueuse/nuxt": "^11.3.0",
