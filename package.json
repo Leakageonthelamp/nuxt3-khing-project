@@ -9,7 +9,7 @@
     "lint": "eslint --max-warnings 0 .",
     "lint:fix": "eslint --fix .",
     "typecheck": "nuxt typecheck",
-    "start": "NODE_ENV=production node .output/public/index.mjs"
+    "start": "NODE_ENV=production node .output/server/index.mjs"
   },
   "devDependencies": {
     "@nuxt/icon": "^1.8.2",

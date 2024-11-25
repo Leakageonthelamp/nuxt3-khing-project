@@ -83,15 +83,15 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          api: 'modern',
-        },
-      },
-    },
-  },
+  // vite: {
+  //   css: {
+  //     preprocessorOptions: {
+  //       scss: {
+  //         api: 'modern',
+  //       },
+  //     },
+  //   },
+  // },
 
   compatibilityDate: '2024-11-25',
 })
