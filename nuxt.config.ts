@@ -18,6 +18,8 @@ export default defineNuxtConfig({
   },
 
   app: {
+    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    buildAssetsDir: 'assets',
     head: {
       title: CONFIG.APP_TITLE,
       htmlAttrs: {
