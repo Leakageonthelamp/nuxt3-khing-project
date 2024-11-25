@@ -63,18 +63,13 @@ export default defineNuxtConfig({
       ],
     },
   },
-
-  build: {
-    transpile: ['@nuxt/image'],
-  },
-
   modules: [
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     'nuxt-lodash',
-    '@nuxt/image',
     '@nuxt/icon',
     'vue3-carousel-nuxt',
+    ['@nuxt/image', { provide: 'static' }],
   ],
 
   css: ['@/assets/main.scss'],
@@ -83,15 +78,15 @@ export default defineNuxtConfig({
     enabled: true,
   },
 
-  // vite: {
-  //   css: {
-  //     preprocessorOptions: {
-  //       scss: {
-  //         api: 'modern',
-  //       },
-  //     },
-  //   },
-  // },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern',
+        },
+      },
+    },
+  },
 
   compatibilityDate: '2024-11-25',
 })
