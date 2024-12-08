@@ -1,64 +1,43 @@
 <template>
   <div class="homepage">
     <div class="header">
-      <img
-        class="w-full h-screen object-cover"
-        src="/images/homepage/header.png"
-        alt="homepage-header"
-        loading="lazy"
-        placeholder="blur"
-      />
-      <div class="absolute inset-0 flex flex-col pt-40 2xl:pt-52 px-20 2xl:px-40 pb-14 2xl:pb-24">
-        <h1 class="text-secondary text-[72px] 2xl:text-[96px] font-medium">Hey There !</h1>
-        <h4 class="text-[72px] 2xl:text-[96px] font-thin leading-relaxed mt-10">
-          i’m Kotchagorn Angchuan, <br />
-          <span class="text-secondary">UX/UI Designer</span>
-        </h4>
-        <h2 class="text-[72px] 2xl:text-[96px] text-secondary font-thin">
-          you can call me
-          <span class="text-black font-normal">{{ displayText }}</span>
-        </h2>
-        <div class="absolute right-10 bottom-10 flex items-center space-x-4">
-          <a
-            v-scroll-to="'#works'"
-            :class="[
-              'w-40 aspect-square cursor-pointer text-xl font-thin',
-              'bg-secondary/80 rounded-full text-white',
-              'flex flex-col items-center justify-center',
-            ]"
-          >
-            <p class="text-center">
-              Next Stop: <br />
-              My Work
-            </p>
-            <Icon name="i-ic:sharp-arrow-downward" class="w-8 h-8 mt-2" />
-          </a>
-          <div class="font-thin">
-            low on time ? <br />
-            <a href="#" class="text-secondary underline">read my resume</a>
-          </div>
+      <div class="h-screen w-full bg-primary flex flex-col p-9">
+        <div class="flex flex-col items-center justify-center flex-grow leading-none">
+          <em class="ic ic-flower size-[132px] text-light animate-spin-slow mb-10" />
+          <h1 class="text-[220px] text-light min-h-[220px]">{{ displayText }}</h1>
+          <h1 class="text-[240px]">Kotchagorn</h1>
+        </div>
+        <div class="flex items-center justify-between">
+          <h5 class="font-noto text-light text-4xl">UXUI Designer</h5>
+          <h5 class="font-noto text-4xl">scroll to see more</h5>
         </div>
       </div>
     </div>
-    <div
-      class="homepage-body bg-cover bg-no-repeat bg-center"
-      style="background-image: url(/images/homepage/main-bg.png)"
-    >
-      <div class="body-section">
-        <section class="py-40">
-          <HomeProjectSelection id="works" />
+
+    <div class="homepage-body">
+      <div class="body-section pb-20">
+        <section class="px-10">
+          <HomeIntroduction />
         </section>
-        <section class="py-60">
-          <HomeAboutMe id="about" />
+
+        <section class="px-10">
+          <HomeSelectedWork />
         </section>
-        <HomeContactMe id="contact" />
+
+        <section>
+          <HomeProfile />
+        </section>
+
+        <section>
+          <HomeContact />
+        </section>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="tsx" setup>
-const nameSet = ref(['ขิง', 'Khing', 'Ginger'])
+const nameSet = ref(['ginger', 'ขิง'])
 const displayText = ref(nameSet.value[0])
 
 onMounted(() => {
@@ -92,6 +71,9 @@ const eraseText = (duration: number) => {
 
 <style lang="scss" scoped>
 .homepage {
+  * {
+    @apply font-mogent;
+  }
   .header {
     @apply relative;
   }

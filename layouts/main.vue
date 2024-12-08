@@ -1,6 +1,6 @@
 <template>
   <div class="main-layout relative">
-    <div class="navbar">
+    <!-- <div class="navbar">
       <nuxt-link to="/">
         <h1 class="text-2xl font-bold text-primary">{{ navbarInfo.title }}</h1>
       </nuxt-link>
@@ -16,7 +16,7 @@
           </p>
         </a>
       </div>
-    </div>
+    </div> -->
     <main>
       <slot />
     </main>

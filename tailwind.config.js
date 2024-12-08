@@ -16,6 +16,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      cursor: {
+        'hover-work': 'url(/mouse-icon.svg), pointer',
+        'hover-work-spin': 'url(/mouse-icon.gif), auto',
+      },
+      animation: {
+        'spin-slow': 'spin 4s linear infinite',
+      },
       borderWidth: {
         1: '1px',
       },
@@ -24,6 +31,7 @@ module.exports = {
         poppins: ['Poppins', 'Noto Sans Thai', 'sans-serif'],
         prompt: ['Prompt', 'sans-serif'],
         noto: ['Noto Sans Thai', 'Prompt', 'sans-serif'],
+        mogent: ['Mogent', 'sans-serif'],
       },
       borderRadius: {
         10: '10px',
@@ -35,10 +43,10 @@ module.exports = {
         black: '#20243E',
         white: '#FFFFFF',
         dark: {
-          DEFAULT: '#383F47',
+          DEFAULT: '#0E0F52',
         },
         light: {
-          DEFAULT: '#FAFCFE',
+          DEFAULT: '#F4E6DB',
         },
         gray: {
           DEFAULT: '#9095A6',
@@ -47,10 +55,10 @@ module.exports = {
           fill: '#F4F5FA',
         },
         primary: {
-          DEFAULT: '#7C7190',
+          DEFAULT: '#C397F9',
         },
         secondary: {
-          DEFAULT: '#A1AECE',
+          DEFAULT: '#8C9A80',
         },
         info: {
           DEFAULT: '#F64976',

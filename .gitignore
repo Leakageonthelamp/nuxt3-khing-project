@@ -15,3 +15,6 @@ dist
 
 auto-imports.d.ts
 public/.DS_Store
+
+.DS_Store
+**/.DS_Store
