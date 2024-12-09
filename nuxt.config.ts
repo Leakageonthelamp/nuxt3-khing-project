@@ -20,7 +20,6 @@ export default defineNuxtConfig({
 
   app: {
     baseURL: process.env.NUXT_APP_BASE_URL || '/',
-    // buildAssetsDir: 'assets',
     head: {
       title: CONFIG.APP_TITLE,
       htmlAttrs: {
@@ -35,7 +34,7 @@ export default defineNuxtConfig({
         {
           hid: 'description',
           name: 'description',
-          content: '',
+          content: 'Ginger Kotchagorn | UXUI Portfolio',
         },
         {
           name: 'format-detection',

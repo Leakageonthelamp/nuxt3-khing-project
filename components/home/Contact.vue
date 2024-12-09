@@ -1,8 +1,8 @@
 <template>
   <div class="pt-10 flex flex-col items-center overflow-hidden">
-    <h2 class="text-[120px] text-secondary whitespace-nowrap -ml-12">
+    <h2 ref="scrollText" class="text-[120px] text-secondary whitespace-nowrap -ml-12">
       Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's
-      contact-
+      contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's
     </h2>
 
     <div class="w-full relative [&:hover_.outer-card]:opacity-0 [&:hover_.inter-text]:z-10">
@@ -36,4 +36,29 @@
   </div>
 </template>
 
-<script lang="tsx" setup></script>
+<script lang="tsx" setup>
+const scrollText = ref<HTMLElement | null>(null)
+let scrollPosition = 0
+
+const handleScroll = () => {
+  const currentScroll = window.scrollY
+  const scrollDirection = currentScroll > scrollPosition ? 1 : -1
+
+  if (scrollText.value) {
+    const currentTranslate = parseFloat(
+      scrollText.value.style.transform?.match(/-?\d+/)?.[0] || '0'
+    )
+    scrollText.value.style.transform = `translateX(${currentTranslate + scrollDirection * 4}px)`
+  }
+
+  scrollPosition = currentScroll
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>

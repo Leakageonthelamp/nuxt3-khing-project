@@ -59,7 +59,8 @@
 
         <div class="size-[400px] relative mt-20">
           <em
-            class="ic ic-flower size-[400px] text-primary absolute -right-[25rem] animate-spin-slow"
+            ref="rotateFlower"
+            class="ic ic-flower size-[400px] text-primary absolute -right-[25rem]"
           />
         </div>
       </div>
@@ -69,4 +70,37 @@
 
 <script lang="tsx" setup>
 const isHoverProfile1 = ref(false)
+const rotateFlower = ref<HTMLElement | null>(null)
+let lastScrollY = ref(0)
+
+onMounted(() => {
+  // Initial rotation
+  if (rotateFlower.value) {
+    rotateFlower.value.style.transform = 'rotate(0deg)'
+  }
+
+  // Add scroll event listener
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  // Clean up event listener
+  window.removeEventListener('scroll', handleScroll)
+})
+
+const handleScroll = () => {
+  if (!rotateFlower.value) return
+
+  const currentScrollY = window.scrollY
+  const scrollDiff = currentScrollY - lastScrollY.value
+
+  // Get current rotation or default to 0
+  const currentRotation =
+    parseFloat(rotateFlower.value.style.transform.replace(/[^0-9.-]/g, '')) || 0
+  // Add rotation based on scroll direction (adjust multiplier for speed)
+  const newRotation = currentRotation + scrollDiff * 0.1
+
+  rotateFlower.value.style.transform = `rotate(${newRotation}deg)`
+  lastScrollY.value = currentScrollY
+}
 </script>

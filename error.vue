@@ -88,7 +88,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import { NuxtError } from '#app'
+import type { NuxtError } from '#app'
 
 defineProps<{ error: NuxtError }>()
 </script>
