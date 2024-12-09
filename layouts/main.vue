@@ -1,22 +1,19 @@
 <template>
   <div class="main-layout relative">
-    <!-- <div class="navbar">
-      <nuxt-link to="/">
-        <h1 class="text-2xl font-bold text-primary">{{ navbarInfo.title }}</h1>
-      </nuxt-link>
-      <div class="flex space-x-16">
-        <a
-          v-for="(link, index) in navbarInfo.links"
-          :key="index"
-          href="#"
-          @click="handleNavigate(link.name)"
-        >
-          <p class="text-2xl font-light link-underline link-underline--primary hover:text-primary">
-            {{ link.name }}
-          </p>
-        </a>
+    <div class="navbar">
+      <div class="flex cursor-pointer" @click="isOpen = !isOpen">
+        <Icon name="radix-icons:hamburger-menu" class="size-8" />
       </div>
-    </div> -->
+      <div :class="[borderColor, 'flex items-center space-x-2 border px-4 py-1 rounded-full']">
+        <div :class="[dotColor, 'size-2 rounded-full']"></div>
+        <p :class="[textColor, 'font-poppins']">avaliable for work!</p>
+      </div>
+    </div>
+
+    <transition name="slide-down">
+      <div v-if="isOpen" class="fixed w-screen h-screen bg-secondary z-[100]"></div>
+    </transition>
+
     <main>
       <slot />
     </main>
@@ -33,6 +30,12 @@ import { ref } from '#imports'
 const app = useApp()
 const router = useRouter()
 
+const isOpen = ref(false)
+
+const borderColor = computed(() => `border-${app.pageMeta.secondary_theme_color}`)
+const dotColor = computed(() => `bg-${app.pageMeta.main_theme_color}`)
+const textColor = computed(() => `text-${app.pageMeta.secondary_theme_color}`)
+
 const navbarInfo = ref({
   title: 'ginger',
   links: [
@@ -41,6 +44,15 @@ const navbarInfo = ref({
     { name: 'contact', href: '/contact' },
   ],
 })
+
+// const getDotColor = () => {
+//   switch (app.pageMeta.main_theme_color) {
+//     case 'totiw':
+//       return 'bg-totiw text-totiw border-totiw'
+//     default:
+//       return 'bg-primary'
+//   }
+// }
 
 const handleNavigate = (slug: string) => {
   if (app.pageMeta.title === 'main') {
@@ -56,7 +68,7 @@ const handleNavigate = (slug: string) => {
 
 <style lang="scss" scoped>
 .navbar {
-  @apply px-36 py-8 fixed w-full bg-white/10 backdrop-blur z-[100];
+  @apply px-3 py-3 fixed w-full bg-white/10 backdrop-blur z-[100];
   @apply flex justify-between items-center;
 }
 

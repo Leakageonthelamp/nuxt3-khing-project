@@ -60,6 +60,9 @@ module.exports = {
         secondary: {
           DEFAULT: '#8C9A80',
         },
+        totiw: {
+          DEFAULT: '#D76739',
+        },
         info: {
           DEFAULT: '#F64976',
           50: '#FFEBF0',

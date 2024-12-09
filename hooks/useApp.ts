@@ -19,6 +19,8 @@ export interface IPageMeta {
   title?: string
   layout?: string
   sub_title?: string
+  main_theme_color?: string
+  secondary_theme_color?: string
 }
 
 export interface IApp {
@@ -42,6 +44,8 @@ export const useApp: () => IApp = defineStore('_app', () => {
 
   const updatePageMeta = (payload: IPageMeta) => {
     pageMeta.value = {
+      main_theme_color: payload.main_theme_color || 'light',
+      secondary_theme_color: payload.secondary_theme_color || 'light',
       ...pageMeta.value,
       ...payload,
     }

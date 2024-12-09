@@ -10,7 +10,11 @@ import Totiw from '~/features/Totiw/index.vue'
 
 const app = useApp()
 
-app.updatePageMeta({ title: 'totiw' })
+app.updatePageMeta({
+  title: 'totiw',
+  main_theme_color: 'totiw',
+  secondary_theme_color: 'black',
+})
 app.updateDocMeta({
   title: 'โต๊ะติว (Totiw)',
   description: 'Knowledge sharing for student',

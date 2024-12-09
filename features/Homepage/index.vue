@@ -4,12 +4,12 @@
       <div class="h-screen w-full bg-primary flex flex-col p-9">
         <div class="flex flex-col items-center justify-center flex-grow leading-none">
           <em class="ic ic-flower size-[132px] text-light animate-spin-slow mb-10" />
-          <h1 class="text-[220px] text-light min-h-[220px]">{{ displayText }}</h1>
-          <h1 class="text-[240px]">Kotchagorn</h1>
+          <h1 class="text-[180px] text-light min-h-[180px]">{{ displayText }}</h1>
+          <h1 class="text-[180px]">Kotchagorn</h1>
         </div>
         <div class="flex items-center justify-between">
-          <h5 class="font-noto text-light text-4xl">UXUI Designer</h5>
-          <h5 class="font-noto text-4xl">scroll to see more</h5>
+          <h5 class="font-poppins text-light text-2xl">UXUI Designer</h5>
+          <h5 class="font-poppins text-2xl">scroll to see more</h5>
         </div>
       </div>
     </div>

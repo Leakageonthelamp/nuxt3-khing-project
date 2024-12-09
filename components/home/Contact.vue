@@ -1,6 +1,6 @@
 <template>
   <div class="pt-10 flex flex-col items-center overflow-hidden">
-    <h2 ref="scrollText" class="text-[120px] text-secondary whitespace-nowrap -ml-12">
+    <h2 ref="scrollText" class="text-[120px] text-secondary whitespace-nowrap -ml-40">
       Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's
       contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's
     </h2>
