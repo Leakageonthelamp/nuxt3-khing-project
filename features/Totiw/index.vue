@@ -3,37 +3,11 @@
     <div class="header">
       <img
         class="w-full h-screen object-cover"
-        src="/images/totiw/header.png"
+        src="/images/works/totiw/header.png"
         alt="totiw-header"
         loading="lazy"
         placeholder="blur"
       />
-      <div
-        class="absolute inset-0 flex flex-col-reverse lg:grid lg:grid-cols-2 gap-4 px-10 lg:px-40"
-      >
-        <div class="flex flex-col justify-center">
-          <div class="mb-10">
-            <h1 class="text-[48px] font-normal">โต๊ะติว (To-tiw)</h1>
-            <p>Knowledge sharing application</p>
-          </div>
-          <p class="lg:max-w-[80%] text-lg lg:text-xl">
-            The To-tiw application is my thesis project that solve problem faced by college
-            students, as well as my friends in other faculties. This application aims to solve this
-            problem by preventing the wastage of knowledge resources that are left behind when
-            students graduate. By connecting both current and former students to use the rest of the
-            knowledge resources for maximum benefits.
-          </p>
-        </div>
-        <div class="flex items-center justify-center pt-30">
-          <img
-            class="w-full object-contain"
-            src="/images/totiw/header-pic.png"
-            alt="header-pic"
-            loading="lazy"
-            placeholder="blur"
-          />
-        </div>
-      </div>
     </div>
     <div
       class="homepage-body bg-cover bg-center"

@@ -49,39 +49,39 @@ import { useIntersectionObserver } from '@vueuse/core'
 
 const projects = ref([
   {
-    title: 'Project 1',
+    title: 'HealthFlow',
     path: '/images/homepage/work1.png',
     pathHover: '/images/homepage/work1-alt.png',
     isShow: false,
-    to: '/works/project1',
+    to: '/health-flow',
   },
   {
-    title: 'Project 2',
+    title: 'Health Risk Assessment',
     path: '/images/homepage/work2.png',
     pathHover: '/images/homepage/work2-alt.png',
     isShow: false,
-    to: '/works/project2',
+    to: '/health-risk-assessment',
   },
   {
-    title: 'Project 3',
+    title: 'Totiw',
     path: '/images/homepage/work3.png',
     pathHover: '/images/homepage/work3-alt.png',
     isShow: false,
-    to: '/works/project3',
+    to: '/totiw',
   },
   {
-    title: 'Project 4',
+    title: 'CNVR',
     path: '/images/homepage/work4.png',
     pathHover: '/images/homepage/work4-alt.png',
     isShow: false,
-    to: '/works/project4',
+    to: '/cnvr',
   },
   {
-    title: 'Project 5',
+    title: 'CO Backyard',
     path: '/images/homepage/work5.png',
     pathHover: '/images/homepage/work5-alt.png',
     isShow: false,
-    to: '/works/project5',
+    to: '/co-backyard',
   },
 ])
 
