@@ -11,16 +11,16 @@
         <div v-if="slidesCount > 1">
           <div
             v-if="currentSlide !== 0"
-            class="absolute top-[85%] left-[5%] rounded-full bg-secondary/80 flex items-center justify-center p-4 cursor-pointer"
-            :class="['transition-all hover:scale-110']"
+            class="absolute top-[85%] left-[5%] rounded-full flex items-center justify-center p-4 cursor-pointer"
+            :class="['transition-all hover:scale-110', buttonColor ? buttonColor : 'bg-primary/80']"
             @click="handlePrev"
           >
             <Icon name="i-fa6-solid:angle-left" class="w-8 h-8 text-white" />
           </div>
           <div
             v-if="currentSlide !== slidesCount - 1"
-            class="absolute top-[85%] right-[5%] rounded-full bg-secondary/80 flex items-center justify-center p-4 cursor-pointer"
-            :class="['transition-all hover:scale-110']"
+            class="absolute top-[85%] right-[5%] rounded-full flex items-center justify-center p-4 cursor-pointer"
+            :class="['transition-all hover:scale-110', buttonColor ? buttonColor : 'bg-primary/80']"
             @click="handleNext"
           >
             <Icon name="i-fa6-solid:angle-right" class="w-8 h-8 text-white" />
@@ -42,6 +42,7 @@ interface ICarouselItem {
 }
 
 defineProps<{
+  buttonColor?: string
   items: ICarouselItem[]
 }>()
 

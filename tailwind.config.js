@@ -62,6 +62,8 @@ module.exports = {
         },
         totiw: {
           DEFAULT: '#D76739',
+          blue: '#3C75E9',
+          yellow: '#F2BB3E',
         },
         info: {
           DEFAULT: '#F64976',

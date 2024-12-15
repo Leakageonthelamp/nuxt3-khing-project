@@ -1,60 +1,26 @@
 <template>
   <div>
-    <div class="text-[48px] border-b border-dark pb-4">Define</div>
-    <div class="my-10">
-      <p class="text-xl">
-        After summarizing interviews, I analyzed data using various methods, including competitor
-        analysis. I identified pros and cons of other apps, organized on a Miro board (in Thai).
-        This analysis provided valuable insights, guiding informed design decisions for
-        user-centered experiences.
-      </p>
+    <h1 class="text-4xl text-totiw-blue">Define information</h1>
+    <p class="mt-4">
+      After summarizing interviews, I analyzed data using various methods, including competitor
+      analysis.
+    </p>
 
-      <div class="mt-10 mb-8">
-        <ImageCarousel :items="slideItems" />
-        <p class="text-secondary">Some section form my Miro board.</p>
-      </div>
-      <p class="text-xl">
-        I found that users played different roles in sharing: "givers" (lending, sharing knowledge,
-        tutoring) and "receivers." To address knowledge sharing challenges among students, To
-        capture this, I created a framework titled "Who Shares What to Whom?"
-      </p>
-      <div class="my-16">
-        <img class="w-full object-contain" src="/images/totiw/who-share-whom.png" alt="wsw-totiw" />
-      </div>
-      <div>
-        <h1 class="text-[40px] text-primary mb-6">Create persona</h1>
-        <p class="text-xl">
-          Based on the above framework, it is evident that this app should have two roles: the tutor
-          and the receiver. Therefore, I have summarized the data into two personas.
-        </p>
-        <div class="grid grid-cols-2 gap-6 mt-10">
-          <img
-            class="w-full object-contain"
-            src="/images/totiw/persona-1.png"
-            alt="persona-totiw-1"
-          />
-          <img
-            class="w-full object-contain"
-            src="/images/totiw/persona-2.png"
-            alt="persona-totiw-2"
-          />
-        </div>
-      </div>
-      <div class="my-20">
-        <h1 class="text-[40px] text-primary mb-6">Design Opportunity</h1>
-        <p class="text-xl">
-          I have categorized the problems and identified four main areas where we can find design
-          opportunities. These opportunities will be used to brainstorm and create new features in
-          the next design phase.
-        </p>
-        <div class="mt-20">
-          <img
-            class="w-full object-contain"
-            src="/images/totiw/design-oppo.png"
-            alt="design-oppo"
-          />
-        </div>
-      </div>
+    <div class="mt-4">
+      <ImageCarousel :items="slideItems" buttonColor="bg-totiw-blue" />
+    </div>
+
+    <p class="mt-6">
+      From my analysis, I designed the app to include “givers” (sharing books, notes, and knowledge)
+      and “receivers” (using them for exams or studying),and I captured in the framework “Who Shares
+      What to Whom?” and Persona of these two roll
+    </p>
+
+    <div class="grid grid-cols-2 gap-10 px-14 mt-6">
+      <img src="/images/works/totiw/define1.png" alt="define1" class="w-full col-span-2" />
+
+      <img src="/images/works/totiw/define2.png" alt="define2" class="w-full" />
+      <img src="/images/works/totiw/define3.png" alt="define3" class="w-full" />
     </div>
   </div>
 </template>

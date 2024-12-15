@@ -40,3 +40,7 @@ body,
         border-right: 70px solid transparent;
     }
 }
+
+.divider {
+    @apply w-full h-px bg-black;
+}
