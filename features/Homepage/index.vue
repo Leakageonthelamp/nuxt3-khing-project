@@ -57,7 +57,7 @@ onMounted(() => {
 
   setTimeout(() => {
     handleScrollTo(slug.value as string)
-  }, 1000)
+  }, 500)
 })
 
 const handleScrollTo = (slug: string) => {

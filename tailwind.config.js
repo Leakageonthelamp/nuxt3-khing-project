@@ -65,6 +65,10 @@ module.exports = {
           blue: '#3C75E9',
           yellow: '#F2BB3E',
         },
+        healthflow: {
+          DEFAULT: '#00A991',
+          secondary: '#4175A6',
+        },
         info: {
           DEFAULT: '#F64976',
           50: '#FFEBF0',

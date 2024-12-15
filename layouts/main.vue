@@ -92,6 +92,8 @@ const navbarInfo = ref([
 
 const getThemeColor = (slug: string) => {
   switch (slug) {
+    case 'health-flow':
+      return { bg_color: 'bg-black', text_color: 'text-black', border_color: 'border-black' }
     case 'totiw':
       return { bg_color: 'bg-totiw', text_color: 'text-black', border_color: 'border-black' }
     default:

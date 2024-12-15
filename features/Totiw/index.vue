@@ -17,9 +17,9 @@
             <a
               v-for="(list, index) in navigationList"
               :key="index"
-              v-scroll-to="`#${list.id}`"
-              class="font-light hover:underline hover:text-bold transition-all duration-300 cursor-pointer whitespace-nowrap"
-              :class="list.isActive ? 'font-bold text-2xl underline' : ''"
+              class="hover:underline hover:text-bold transition-all duration-300 cursor-pointer whitespace-nowrap"
+              :class="list.isActive ? 'font-bold text-2xl underline' : 'font-light'"
+              @click="scrollToSection(list.id)"
             >
               {{ list.label }}
             </a>
@@ -93,6 +93,8 @@
 </template>
 
 <script lang="tsx" setup>
+import VueScrollTo from 'vue-scrollto'
+
 import ProjectOverview from '~/components/totiw/ProjectOverview.vue'
 import Research from '~/components/totiw/Research.vue'
 import Define from '~/components/totiw/Define.vue'
@@ -246,6 +248,16 @@ const handleIdeateActiveSection = (id: string) => {
       item.isActive = false
     }
   })
+}
+
+const scrollToSection = (id: string) => {
+  VueScrollTo.scrollTo(`#${id}`, 500, { offset: -100 })
+
+  setTimeout(() => {
+    navigationList.value.forEach((item) => {
+      item.isActive = item.id === id
+    })
+  }, 500)
 }
 </script>
 

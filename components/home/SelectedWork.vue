@@ -27,12 +27,20 @@
                   :src="project.path"
                   class="w-full opacity-100 img-first transition-opacity duration-500 absolute inset-0"
                   alt="project"
+                  loading="lazy"
+                  placeholder="blur"
                 />
                 <nuxt-link
                   :to="project.to"
                   class="absolute inset-0 opacity-0 img-second transition-opacity duration-500 cursor-hover-work"
                 >
-                  <nuxt-img :src="project.pathHover" class="w-full" alt="project" />
+                  <nuxt-img
+                    :src="project.pathHover"
+                    class="w-full"
+                    alt="project"
+                    loading="lazy"
+                    placeholder="blur"
+                  />
                 </nuxt-link>
               </div>
             </div>
@@ -96,6 +104,6 @@ const { stop } = useIntersectionObserver(
       }
     }
   },
-  { threshold: 0.5 }
+  { threshold: 0.3 }
 )
 </script>

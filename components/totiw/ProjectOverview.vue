@@ -7,12 +7,12 @@
     </p>
 
     <div class="grid grid-cols-12 divide-x-1 divide-black">
-      <div class="col-span-3 space-y-2">
+      <div class="col-span-3 space-y-2 pr-4">
         <h5 class="text-2xl font-normal text-totiw-blue">Duration</h5>
         <p>8 Months</p>
       </div>
 
-      <div class="col-span-3 space-y-2 pl-4">
+      <div class="col-span-3 space-y-2 px-4">
         <h5 class="text-2xl font-normal text-totiw-blue">Tool</h5>
         <p>Figma, Miro, Overflow, Procreate</p>
       </div>

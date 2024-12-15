@@ -10,30 +10,41 @@
 
     <div class="mt-10">
       <h2 class="text-totiw-blue text-4xl">Improvement</h2>
-      <ul class="list-decimal pl-3 mt-6 flex flex-col gap-1">
+      <ul class="list-decimal text-totiw-blue ml-4 mt-6 flex flex-col gap-1">
         <li>
-          <span class="text-totiw-blue">Enhanced UX:</span>
-          Some core features are buried too deep in the app, requiring multiple clicks. I plan to
-          reorganize the homepage by prioritizing and rearranging key features.
+          Enhanced UX:
+          <span class="text-black">
+            Some core features are buried too deep in the app, requiring multiple clicks. I plan to
+            reorganize the homepage by prioritizing and rearranging key features.
+          </span>
         </li>
         <li>
-          <span class="text-totiw-blue">Integrated Courier Services:</span>
-          Collaborated with courier services for seamless tracking and delivery of study materials.
+          Integrated Courier Services:
+          <span class="text-black">
+            Collaborated with courier services for seamless tracking and delivery of study
+            materials.
+          </span>
         </li>
         <li>
-          <span class="text-totiw-blue">Improved Rating and Review System:</span>
-          Upgraded the system to ensure reliable feedback, enabling better user decisions and
-          fostering a supportive learning community.
+          Improved Rating and Review System:
+          <span class="text-black">
+            Upgraded the system to ensure reliable feedback, enabling better user decisions and
+            fostering a supportive learning community.
+          </span>
         </li>
         <li>
-          <span class="text-totiw-blue">Stronger User Verification and Penalty System:</span>
-          Added user verification and fair penalties to deter rule violations and promote
-          accountability.
+          Stronger User Verification and Penalty System:
+          <span class="text-black">
+            Added user verification and fair penalties to deter rule violations and promote
+            accountability.
+          </span>
         </li>
         <li>
-          <span class="text-totiw-blue">Expanded University Data Repository:</span>
-          Developed a comprehensive database of faculties and courses to offer accurate study table
-          recommendations and relevant content.
+          Expanded University Data Repository:
+          <span class="text-black">
+            Developed a comprehensive database of faculties and courses to offer accurate study
+            table recommendations and relevant content.
+          </span>
         </li>
       </ul>
     </div>
