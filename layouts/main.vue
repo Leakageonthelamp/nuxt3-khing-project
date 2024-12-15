@@ -11,7 +11,46 @@
     </div>
 
     <transition name="slide-down">
-      <div v-if="isOpen" class="fixed w-screen h-screen bg-secondary z-[100]"></div>
+      <div
+        v-if="isOpen"
+        class="fixed inset-0 w-screen h-screen bg-secondary z-[100] overscroll-auto"
+      >
+        <div class="absolute p-8">
+          <Icon
+            name="heroicons:x-mark"
+            class="size-10 text-light cursor-pointer"
+            @click="isOpen = !isOpen"
+          />
+        </div>
+
+        <div class="flex flex-col items-center justify-center text-light py-10">
+          <h5 class="text-3xl font-extralight">online portfolio</h5>
+          <em class="ic ic-flower size-20 mt-8" />
+
+          <div class="flex flex-col items-center justify-center">
+            <div
+              v-for="item in navbarInfo"
+              :key="item.name"
+              class="text-light hover:text-primary font-mogent text-[120px] hover:scale-110 transition-all duration-300 leading-[1.2] cursor-pointer"
+              @click="handleNavigate(item.goTo)"
+            >
+              {{ item.name }}
+            </div>
+          </div>
+
+          <nuxt-link
+            to="https://www.linkedin.com/in/ginger-kotchagorn/"
+            target="_blank"
+            class="border border-light px-6 py-1 rounded-full flex items-center text-2xl font-extralight mt-6"
+          >
+            Linkedin <em class="ic ic-arrow-up-right size-4 ml-2" />
+          </nuxt-link>
+        </div>
+
+        <div class="absolute bottom-0 flex items-center justify-center w-full mb-10">
+          <h5 class="text-light">© ginger kotchagorn 2024</h5>
+        </div>
+      </div>
     </transition>
 
     <main>
@@ -24,7 +63,6 @@
 </template>
 
 <script lang="tsx" setup>
-import VueScrollTo from 'vue-scrollto'
 import { ref } from '#imports'
 
 const app = useApp()
@@ -36,33 +74,17 @@ const borderColor = computed(() => `border-${app.pageMeta.secondary_theme_color}
 const dotColor = computed(() => `bg-${app.pageMeta.main_theme_color}`)
 const textColor = computed(() => `text-${app.pageMeta.secondary_theme_color}`)
 
-const navbarInfo = ref({
-  title: 'ginger',
-  links: [
-    { name: 'works', href: '/works' },
-    { name: 'about', href: '/about' },
-    { name: 'contact', href: '/contact' },
-  ],
-})
-
-// const getDotColor = () => {
-//   switch (app.pageMeta.main_theme_color) {
-//     case 'totiw':
-//       return 'bg-totiw text-totiw border-totiw'
-//     default:
-//       return 'bg-primary'
-//   }
-// }
+const navbarInfo = ref([
+  { name: 'home', goTo: 'home' },
+  { name: 'works', goTo: 'works' },
+  { name: 'about', goTo: 'about' },
+  { name: 'contact', goTo: 'contact' },
+])
 
 const handleNavigate = (slug: string) => {
-  if (app.pageMeta.title === 'main') {
-    VueScrollTo.scrollTo(`#${slug}`, 500, { offset: -100 })
-  } else {
-    router.push(`/`)
-    setTimeout(() => {
-      VueScrollTo.scrollTo(`#${slug}`, 500, { offset: -100 })
-    }, 500)
-  }
+  router.push(`/?slug=${slug}`)
+
+  isOpen.value = false
 }
 </script>
 

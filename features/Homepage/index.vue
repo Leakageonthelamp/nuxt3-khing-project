@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage">
+  <div class="homepage" id="home">
     <div class="header">
       <div class="h-screen w-full bg-primary flex flex-col p-9">
         <div class="flex flex-col items-center justify-center flex-grow leading-none">
@@ -20,15 +20,15 @@
           <HomeIntroduction />
         </section>
 
-        <section class="px-10">
+        <section class="px-10" id="works">
           <HomeSelectedWork />
         </section>
 
-        <section>
+        <section id="about">
           <HomeProfile />
         </section>
 
-        <section>
+        <section id="contact">
           <HomeContact />
         </section>
       </div>
@@ -37,8 +37,14 @@
 </template>
 
 <script lang="tsx" setup>
+import VueScrollTo from 'vue-scrollto'
+
+const route = useRoute()
+
 const nameSet = ref(['ginger', 'ขิง'])
 const displayText = ref(nameSet.value[0])
+
+const slug = computed(() => route.query.slug || 'home')
 
 onMounted(() => {
   setInterval(() => {
@@ -48,7 +54,15 @@ onMounted(() => {
       nameSet.value.push(nameSet.value.shift()!)
     }, 1000)
   }, 3000)
+
+  setTimeout(() => {
+    handleScrollTo(slug.value as string)
+  }, 1000)
 })
+
+const handleScrollTo = (slug: string) => {
+  VueScrollTo.scrollTo(`#${slug}`, 500, { offset: 0 })
+}
 
 const typeText = (text: string, duration: number) => {
   const textLength = text.length
@@ -67,6 +81,10 @@ const eraseText = (duration: number) => {
     }, duration * i)
   }
 }
+
+watch(slug, (newSlug) => {
+  handleScrollTo(newSlug as string)
+})
 </script>
 
 <style lang="scss" scoped>
