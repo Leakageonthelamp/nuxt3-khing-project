@@ -1,10 +1,10 @@
 <template>
   <div class="hra-page">
     <div class="header">
-      <img
+      <nuxt-img
         class="w-full object-cover"
         src="/images/works/hra/header.png"
-        alt="totiw-header"
+        alt="hra-header"
         loading="lazy"
         placeholder="blur"
       />
@@ -27,10 +27,10 @@
         </div>
         <div id="projectObserver" class="col-start-1 lg:col-start-4 col-end-13 flex flex-col">
           <section id="overview">
-            <ProjectOverview />
+            <Overview />
           </section>
 
-          <!-- <div class="divider my-16" />
+          <div class="divider my-16" />
 
           <section id="research">
             <Research />
@@ -50,14 +50,8 @@
 
           <div class="divider my-16" />
 
-          <section id="prototypeAndTest">
-            <Wireframe @active-section="handleIdeateActiveSection" />
-          </section>
-
-          <div class="divider my-16" />
-
-          <section id="visualDesign">
-            <Visual />
+          <section id="wireframe">
+            <Wireframe />
           </section>
 
           <div class="divider my-16" />
@@ -68,32 +62,40 @@
 
           <div class="divider my-16" />
 
-          <section id="projectOutcome">
+          <section id="outcome">
             <Outcome />
-          </section> -->
+          </section>
         </div>
       </div>
 
       <div class="w-full flex items-center justify-center mt-20 mb-10">
         <p class="text-sm">
-          If you like this project, <span class="text-totiw-blue text-xl">contact me!</span>
+          If you like this project, <span class="text-hra text-xl">contact me!</span>
         </p>
+      </div>
+    </div>
+
+    <div v-for="(list, index) in sideNavigateList" :key="index" class="fixed bottom-16 left-24">
+      <div
+        :id="list.id"
+        :class="['transition duration-500', list.isActive ? 'opacity-100' : 'opacity-0']"
+      >
+        <SideNavigate :title="list.title" :sub-title="list.subtitle" :to="list.to" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="tsx" setup>
-import ProjectOverview from '~/components/totiw/ProjectOverview.vue'
-import Research from '~/components/totiw/Research.vue'
-import Define from '~/components/totiw/Define.vue'
-import Ideate from '~/components/totiw/Ideate.vue'
-import Wireframe from '~/components/totiw/Wireframe.vue'
-import Visual from '~/components/totiw/Visual.vue'
-import Final from '~/components/totiw/Final.vue'
-import Outcome from '~/components/totiw/Outcome.vue'
+import Overview from '~/components/hra/Overview.vue'
+import Research from '~/components/hra/Research.vue'
+import Define from '~/components/hra/Define.vue'
+import Ideate from '~/components/hra/Ideate.vue'
+import Wireframe from '~/components/hra/Wireframe.vue'
+import Final from '~/components/hra/Final.vue'
+import Outcome from '~/components/hra/Outcome.vue'
 
-import SideNavigate from '~/components/totiw/SideNavigate.vue'
+import SideNavigate from '~/components/hra/SideNavigate.vue'
 
 const navigationList = ref([
   {
@@ -117,13 +119,8 @@ const navigationList = ref([
     isActive: false,
   },
   {
-    id: 'prototypeAndTest',
-    label: 'Prototype & Testing',
-    isActive: false,
-  },
-  {
-    id: 'visualDesign',
-    label: 'Visual Design',
+    id: 'wireframe',
+    label: 'Wireframe',
     isActive: false,
   },
   {
@@ -132,7 +129,7 @@ const navigationList = ref([
     isActive: false,
   },
   {
-    id: 'projectOutcome',
+    id: 'outcome',
     label: 'Project outcome',
     isActive: false,
   },
@@ -140,38 +137,10 @@ const navigationList = ref([
 
 const sideNavigateList = ref([
   {
-    id: 'main',
-    title: 'Information Architecture',
+    id: 'flowchart',
+    title: 'Flowchart',
     subtitle: 'figjam',
     to: 'https://www.figma.com/file/9iTdNcXe9CjSBlqdkjFRnO/Untitled?node-id=0:1',
-    isActive: false,
-  },
-  {
-    id: 'flow',
-    title: 'Full Size Flowchart',
-    subtitle: 'pdf',
-    to: '',
-    isActive: false,
-  },
-  {
-    id: 'concept',
-    title: 'Full Size Mood Board',
-    subtitle: 'pdf',
-    to: '',
-    isActive: false,
-  },
-  {
-    id: 'skecthing',
-    title: 'Skecthing',
-    subtitle: 'figma',
-    to: '',
-    isActive: false,
-  },
-  {
-    id: 'wireframe',
-    title: 'Wireframe',
-    subtitle: 'figma',
-    to: '',
     isActive: false,
   },
 ])
@@ -207,10 +176,7 @@ const activeIntersection = () => {
         })
       }
 
-      if (
-        currentIntersection.value !== 'ideate' &&
-        currentIntersection.value !== 'prototypeAndTest'
-      ) {
+      if (currentIntersection.value !== 'ideate') {
         sideNavigateList.value.forEach((item) => {
           item.isActive = false
         })
@@ -242,7 +208,7 @@ const handleIdeateActiveSection = (id: string) => {
 
 <style lang="scss" scoped>
 .hra-page {
-  @apply bg-[#F7F4ED];
+  @apply bg-[#F2F5F3];
   .header {
     @apply relative;
   }

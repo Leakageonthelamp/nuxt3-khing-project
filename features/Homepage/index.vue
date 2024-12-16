@@ -15,7 +15,7 @@
     </div>
 
     <div class="homepage-body">
-      <div class="body-section pb-20">
+      <div class="body-section pb-16">
         <section class="px-10">
           <HomeIntroduction />
         </section>

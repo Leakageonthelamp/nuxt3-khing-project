@@ -1,7 +1,7 @@
 <template>
   <div class="totiw-page">
     <div class="header">
-      <img
+      <nuxt-img
         class="w-full object-cover"
         src="/images/works/totiw/header.png"
         alt="totiw-header"

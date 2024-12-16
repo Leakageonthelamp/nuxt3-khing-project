@@ -1,9 +1,12 @@
 <template>
-  <NuxtLayout name="main"> Health Risk Assessment </NuxtLayout>
+  <NuxtLayout name="main">
+    <HRA />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
 import { useApp } from '~/hooks/useApp'
+import HRA from '~/features/HRA/index.vue'
 
 const app = useApp()
 

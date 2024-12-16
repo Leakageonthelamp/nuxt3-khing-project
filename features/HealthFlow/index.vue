@@ -1,7 +1,7 @@
 <template>
   <div class="health-flow-page">
     <div class="header">
-      <img
+      <nuxt-img
         class="w-full object-cover"
         src="/images/works/healthflow/header.png"
         alt="health-flow-header"

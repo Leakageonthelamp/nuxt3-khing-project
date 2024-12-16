@@ -58,10 +58,6 @@
               Linkedin <em class="ic ic-arrow-up-right size-4 ml-2" />
             </nuxt-link>
           </div>
-
-          <div class="flex items-center justify-center w-full mt-6">
-            <h5 class="text-light">© ginger kotchagorn 2024</h5>
-          </div>
         </div>
       </div>
     </transition>
@@ -70,7 +66,7 @@
       <slot />
     </main>
     <div class="footer">
-      <h5 class="text-secondary">© ginger kotchagorn 2024</h5>
+      <h5 class="text-gray-300 text-xs">© ginger kotchagorn 2024</h5>
     </div>
   </div>
 </template>
@@ -93,7 +89,17 @@ const navbarInfo = ref([
 const getThemeColor = (slug: string) => {
   switch (slug) {
     case 'health-flow':
-      return { bg_color: 'bg-black', text_color: 'text-black', border_color: 'border-black' }
+      return {
+        bg_color: 'bg-healthflow-secondary',
+        text_color: 'text-black',
+        border_color: 'border-black',
+      }
+    case 'health-risk-assessment':
+      return {
+        bg_color: 'bg-hra',
+        text_color: 'text-black',
+        border_color: 'border-black',
+      }
     case 'totiw':
       return { bg_color: 'bg-totiw', text_color: 'text-black', border_color: 'border-black' }
     default:
