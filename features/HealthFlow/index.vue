@@ -71,7 +71,11 @@
       <div class="w-full flex items-center justify-center mt-20 mb-10">
         <p class="text-sm">
           If you like this project,
-          <span class="text-healthflow-secondary text-xl">contact me!</span>
+          <nuxt-link to="/?slug=contact">
+            <span class="text-healthflow-secondary text-xl underline cursor-pointer"
+              >contact me!</span
+            >
+          </nuxt-link>
         </p>
       </div>
     </div>

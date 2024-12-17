@@ -103,7 +103,11 @@ const getThemeColor = (slug: string) => {
     case 'totiw':
       return { bg_color: 'bg-totiw', text_color: 'text-black', border_color: 'border-black' }
     case 'cnvr':
-      return { bg_color: 'bg-cnvr', text_color: 'text-cnvr', border_color: 'border-cnvr' }
+      return {
+        bg_color: 'bg-cnvr-secondary',
+        text_color: 'text-black',
+        border_color: 'border-black',
+      }
     default:
       return { bg_color: 'bg-light', text_color: 'text-light', border_color: 'border-light' }
   }

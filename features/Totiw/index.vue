@@ -76,18 +76,24 @@
 
       <div class="w-full flex items-center justify-center mt-20 mb-10">
         <p class="text-sm">
-          If you like this project, <span class="text-totiw-blue text-xl">contact me!</span>
+          If you like this project,
+          <nuxt-link to="/?slug=contact">
+            <span class="text-totiw-blue text-xl underline cursor-pointer">contact me!</span>
+          </nuxt-link>
         </p>
       </div>
     </div>
 
-    <div v-for="(list, index) in sideNavigateList" :key="index" class="fixed bottom-16 left-24">
-      <div
-        :id="list.id"
-        :class="['transition duration-500', list.isActive ? 'opacity-100' : 'opacity-0']"
-      >
-        <SideNavigate :title="list.title" :sub-title="list.subtitle" :to="list.to" />
-      </div>
+    <div
+      v-for="(list, index) in sideNavigateList"
+      :key="`${list.id}-${index}`"
+      class="fixed bottom-16 left-20"
+    >
+      <transition name="slide-down">
+        <nuxt-link v-if="list.isActive" :to="list.to" target="_blank">
+          <SideNavigate :title="list.title" :sub-title="list.subtitle" :to="list.to" />
+        </nuxt-link>
+      </transition>
     </div>
   </div>
 </template>
@@ -158,31 +164,31 @@ const sideNavigateList = ref([
     isActive: false,
   },
   {
-    id: 'flow',
-    title: 'Full Size Flowchart',
-    subtitle: 'pdf',
-    to: '',
-    isActive: false,
-  },
-  {
     id: 'concept',
     title: 'Full Size Mood Board',
     subtitle: 'pdf',
-    to: '',
-    isActive: false,
-  },
-  {
-    id: 'skecthing',
-    title: 'Skecthing',
-    subtitle: 'figma',
-    to: '',
+    to: '/file/totiw-moodboard.pdf',
     isActive: false,
   },
   {
     id: 'wireframe',
     title: 'Wireframe',
     subtitle: 'figma',
-    to: '',
+    to: 'https://www.figma.com/design/5nI6uPuzHbRpZFp47fCeTL/Totiw-Wireframe-(5-pages)?node-id=0-1&p=f&t=gfyDDMUmVQ7PIoTX-0',
+    isActive: false,
+  },
+  {
+    id: 'appScreen',
+    title: 'Application Screens',
+    subtitle: 'figma',
+    to: 'https://www.figma.com/design/mqJNhhsUThM9F7zlCCpCxN/Totiw-Application?node-id=172-5132',
+    isActive: false,
+  },
+  {
+    id: 'appPrototype',
+    title: 'Application Prototype',
+    subtitle: 'figma',
+    to: 'https://www.figma.com/proto/mqJNhhsUThM9F7zlCCpCxN/Totiw-Application?node-id=1301-6502&p=f&scaling=scale-down&content-scaling=fixed&page-id=172%3A5132&starting-point-node-id=1301%3A6475&show-proto-sidebar=1',
     isActive: false,
   },
 ])
@@ -224,6 +230,18 @@ const activeIntersection = () => {
       ) {
         sideNavigateList.value.forEach((item) => {
           item.isActive = false
+        })
+      }
+
+      if (currentIntersection.value === 'visualDesign') {
+        sideNavigateList.value.forEach((item) => {
+          item.isActive = item.id === 'appScreen'
+        })
+      }
+
+      if (currentIntersection.value === 'final') {
+        sideNavigateList.value.forEach((item) => {
+          item.isActive = item.id === 'appPrototype'
         })
       }
     })

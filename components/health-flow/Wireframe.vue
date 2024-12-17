@@ -18,7 +18,9 @@
       <div class="flex flex-col gap-10 mt-10">
         <img src="/images/works/healthflow/wireframe1.png" alt="wireframe-1" class="w-full" />
         <img src="/images/works/healthflow/wireframe2.png" alt="wireframe-2" class="w-full" />
-        <img src="/images/works/healthflow/wireframe3.png" alt="wireframe-3" class="w-full" />
+        <nuxt-link to="/health-risk-assessment" target="_blank">
+          <img src="/images/works/healthflow/wireframe3.png" alt="wireframe-3" class="w-full" />
+        </nuxt-link>
         <img src="/images/works/healthflow/wireframe4.png" alt="wireframe-4" class="w-full" />
         <img src="/images/works/healthflow/wireframe5.png" alt="wireframe-5" class="w-full" />
         <img src="/images/works/healthflow/wireframe6.png" alt="wireframe-6" class="w-full" />

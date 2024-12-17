@@ -12,7 +12,9 @@
         </p>
       </div>
 
-      <img src="/images/works/hra/research1.png" alt="research-1" class="w-full" />
+      <div class="flex items-end">
+        <img src="/images/works/hra/research1.png" alt="research-1" class="w-full" />
+      </div>
     </div>
 
     <div>

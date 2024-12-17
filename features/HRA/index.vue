@@ -70,18 +70,24 @@
 
       <div class="w-full flex items-center justify-center mt-20 mb-10">
         <p class="text-sm">
-          If you like this project, <span class="text-hra text-xl">contact me!</span>
+          If you like this project,
+          <nuxt-link to="/?slug=contact">
+            <span class="text-hra-secondary text-xl underline cursor-pointer">contact me!</span>
+          </nuxt-link>
         </p>
       </div>
     </div>
 
-    <div v-for="(list, index) in sideNavigateList" :key="index" class="fixed bottom-16 left-24">
-      <div
-        :id="list.id"
-        :class="['transition duration-500', list.isActive ? 'opacity-100' : 'opacity-0']"
-      >
-        <SideNavigate :title="list.title" :sub-title="list.subtitle" :to="list.to" />
-      </div>
+    <div
+      v-for="(list, index) in sideNavigateList"
+      :key="`${list.id}-${index}`"
+      class="fixed bottom-16 left-24"
+    >
+      <transition name="slide-down">
+        <nuxt-link v-if="list.isActive" :to="list.to" target="_blank">
+          <SideNavigate :title="list.title" :sub-title="list.subtitle" :to="list.to" />
+        </nuxt-link>
+      </transition>
     </div>
   </div>
 </template>
