@@ -1,6 +1,12 @@
 <template>
   <div class="carousel">
-    <Carousel ref="carouselRef" class="relative">
+    <Carousel
+      ref="carouselRef"
+      :class="[
+        'relative rounded-lg overflow-hidden',
+        backgroundColor ? backgroundColor : 'bg-white',
+      ]"
+    >
       <Slide v-for="(slide, index) in items" :key="`slide-${index}`">
         <div class="">
           <img class="w-full max-h-[689px] object-contain" :src="slide.image" :alt="slide.title" />
@@ -41,8 +47,9 @@ interface ICarouselItem {
   image: string
 }
 
-defineProps<{
+const props = defineProps<{
   buttonColor?: string
+  backgroundColor?: string
   items: ICarouselItem[]
 }>()
 
@@ -59,8 +66,4 @@ const handleNext = () => {
 }
 </script>
 
-<style lang="scss" scoped>
-:deep(.carousel__viewport) {
-  @apply bg-white rounded-lg overflow-hidden;
-}
-</style>
+<style lang="scss" scoped></style>

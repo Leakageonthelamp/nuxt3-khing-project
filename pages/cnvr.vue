@@ -1,9 +1,12 @@
 <template>
-  <NuxtLayout name="main"> cnvr </NuxtLayout>
+  <NuxtLayout name="main">
+    <Cnvr />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
 import { useApp } from '~/hooks/useApp'
+import Cnvr from '~/features/CNVR/index.vue'
 
 const app = useApp()
 

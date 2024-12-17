@@ -73,6 +73,10 @@ module.exports = {
           DEFAULT: '#00A991',
           secondary: '#4175A6',
         },
+        cnvr: {
+          DEFAULT: '#D76739',
+          secondary: '#F2BB3E',
+        },
         info: {
           DEFAULT: '#F64976',
           50: '#FFEBF0',

@@ -6,7 +6,7 @@
         src="/images/works/hra/header.png"
         alt="hra-header"
         loading="lazy"
-        placeholder="blur"
+        placeholder=""
       />
     </div>
 

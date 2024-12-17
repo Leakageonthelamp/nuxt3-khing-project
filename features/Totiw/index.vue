@@ -6,7 +6,7 @@
         src="/images/works/totiw/header.png"
         alt="totiw-header"
         loading="lazy"
-        placeholder="blur"
+        placeholder=""
       />
     </div>
 

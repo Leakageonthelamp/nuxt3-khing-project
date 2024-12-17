@@ -1,7 +1,6 @@
 import { CONFIG } from './constants/config.const'
 
 export default defineNuxtConfig({
-  ssr: false,
   experimental: {
     writeEarlyHints: true,
     payloadExtraction: false,

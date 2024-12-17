@@ -120,7 +120,7 @@
             :src="hiddenImage"
             alt="cover"
             loading="lazy"
-            placeholder="blur"
+            placeholder=""
           />
         </div>
         <img
@@ -128,7 +128,7 @@
           :src="profileImage"
           alt="profile"
           loading="lazy"
-          placeholder="blur"
+          placeholder=""
         />
       </div>
     </div>

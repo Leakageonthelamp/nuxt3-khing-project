@@ -28,7 +28,7 @@
                   class="w-full opacity-100 img-first transition-opacity duration-500 absolute inset-0"
                   alt="project"
                   loading="lazy"
-                  placeholder="blur"
+                  placeholder=""
                 />
                 <nuxt-link
                   :to="project.to"
@@ -39,7 +39,7 @@
                     class="w-full"
                     alt="project"
                     loading="lazy"
-                    placeholder="blur"
+                    placeholder=""
                   />
                 </nuxt-link>
               </div>
