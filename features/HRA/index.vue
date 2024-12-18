@@ -147,7 +147,7 @@ const sideNavigateList = ref([
     id: 'flowchart',
     title: 'Flowchart',
     subtitle: 'figjam',
-    to: 'https://www.figma.com/file/9iTdNcXe9CjSBlqdkjFRnO/Untitled?node-id=0:1',
+    to: 'https://www.figma.com/board/NH7Z4XaaIxaExuP1V22nim/Health-Assessment-Flowchart?node-id=0-1&p=f&t=BHkvVIsLgbatqlgQ-0',
     isActive: false,
   },
 ])
