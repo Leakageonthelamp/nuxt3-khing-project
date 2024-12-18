@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout name="main">
-    <Totiw />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="main">
+      <Totiw />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

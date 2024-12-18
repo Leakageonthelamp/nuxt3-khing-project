@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLoadingIndicator color="#C397F9" />
+    <NuxtLoadingIndicator color="#C397F9" :height="4" />
     <NuxtPage />
 
     <SpeedInsights />

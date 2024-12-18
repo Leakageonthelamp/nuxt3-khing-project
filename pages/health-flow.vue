@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout name="main">
-    <HealthFlow />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="main">
+      <HealthFlow />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

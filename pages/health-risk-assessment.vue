@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout name="main">
-    <HRA />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="main">
+      <HRA />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

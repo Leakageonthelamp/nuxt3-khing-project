@@ -5,8 +5,9 @@
         class="w-full object-cover"
         src="/images/works/healthflow/header.png"
         alt="health-flow-header"
-        loading="lazy"
-        placeholder="/images/homepage/work1-alt.png"
+        format="webp"
+        :preload="true"
+        :placeholder="['100%', '100%', 50, 5]"
       />
     </div>
 

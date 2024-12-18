@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout name="main">
-    <Cnvr />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="main">
+      <Cnvr />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

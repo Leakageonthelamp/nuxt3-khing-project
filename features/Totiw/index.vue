@@ -5,8 +5,9 @@
         class="w-full object-cover"
         src="/images/works/totiw/header.png"
         alt="totiw-header"
-        loading="lazy"
-        placeholder=""
+        format="webp"
+        :preload="true"
+        :placeholder="['100%', '100%', 50, 5]"
       />
     </div>
 

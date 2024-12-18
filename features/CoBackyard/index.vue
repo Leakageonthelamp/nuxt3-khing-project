@@ -5,8 +5,9 @@
         class="w-full object-cover"
         src="/images/works/co-backyard/header.png"
         alt="co-backyard-header"
-        loading="lazy"
-        placeholder=""
+        format="webp"
+        :preload="true"
+        :placeholder="['100%', '100%', 50, 5]"
       />
     </div>
 

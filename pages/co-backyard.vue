@@ -1,7 +1,9 @@
 <template>
-  <NuxtLayout name="main">
-    <CoBackyard />
-  </NuxtLayout>
+  <div>
+    <NuxtLayout name="main">
+      <CoBackyard />
+    </NuxtLayout>
+  </div>
 </template>
 
 <script setup lang="ts">

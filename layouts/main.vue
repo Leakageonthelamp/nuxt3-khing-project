@@ -53,6 +53,8 @@
             <nuxt-link
               to="https://www.linkedin.com/in/ginger-kotchagorn/"
               target="_blank"
+              prefetch
+              prefetch-on="interaction"
               class="border border-light text-light px-6 py-1 rounded-full flex items-center text-2xl font-extralight mt-6"
             >
               Linkedin <em class="ic ic-arrow-up-right size-4 ml-2" />
