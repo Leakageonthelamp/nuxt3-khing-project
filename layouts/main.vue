@@ -34,7 +34,7 @@
 
         <div class="flex flex-col items-center justify-center h-full text-light">
           <div class="flex flex-col items-center justify-center text-light">
-            <h5 class="text-3xl font-extralight">online portfolio</h5>
+            <h5 class="text-xl font-extralight">online portfolio</h5>
             <em class="ic ic-flower size-20 mt-8" />
 
             <div class="flex flex-col items-center justify-center">
