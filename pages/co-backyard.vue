@@ -1,9 +1,13 @@
 <template>
-  <NuxtLayout name="main"> co backyard </NuxtLayout>
+  <NuxtLayout name="main">
+    <CoBackyard />
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
 import { useApp } from '~/hooks/useApp'
+
+import CoBackyard from '~/features/CoBackyard/index.vue'
 
 const app = useApp()
 

@@ -108,6 +108,12 @@ const getThemeColor = (slug: string) => {
         text_color: 'text-black',
         border_color: 'border-black',
       }
+    case 'co-backyard':
+      return {
+        bg_color: 'bg-cby',
+        text_color: 'text-black',
+        border_color: 'border-black',
+      }
     default:
       return { bg_color: 'bg-light', text_color: 'text-light', border_color: 'border-light' }
   }

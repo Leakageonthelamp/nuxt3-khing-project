@@ -77,6 +77,10 @@ module.exports = {
           DEFAULT: '#D76739',
           secondary: '#F2BB3E',
         },
+        cby: {
+          DEFAULT: '#8C9A80',
+          secondary: '#E19949',
+        },
         info: {
           DEFAULT: '#F64976',
           50: '#FFEBF0',
