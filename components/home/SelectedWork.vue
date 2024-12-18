@@ -1,9 +1,21 @@
 <template>
   <div class="py-20">
     <div class="flex flex-col items-center">
-      <h2 class="text-[128px]">Selected Work</h2>
-      <p class="text-2xl font-light text-center font-poppins">
-        featured my ux/ui project <br />
+      <h2
+        :class="[
+          'text-[96px] transition-all duration-1000',
+          isActiveWorks ? 'text-light' : 'text-black',
+        ]"
+      >
+        Selected Work
+      </h2>
+      <p
+        :class="[
+          'font-light font-poppins text-center transition-all duration-1000',
+          isActiveWorks ? 'text-light' : 'text-black',
+        ]"
+      >
+        featured my UX/UI project <br />
         from 2020 to 2024
       </p>
     </div>
@@ -54,6 +66,10 @@
 <script lang="tsx" setup>
 import { ref } from '#imports'
 import { useIntersectionObserver } from '@vueuse/core'
+
+defineProps<{
+  isActiveWorks: boolean
+}>()
 
 const projects = ref([
   {

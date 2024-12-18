@@ -1,8 +1,11 @@
 <template>
   <div class="flex gap-20 justify-between py-20 px-10 overflow-hidden">
-    <div class="w-full flex gap-10">
+    <div id="profile" class="w-full flex gap-10">
       <div class="flex justify-center w-full max-w-[368px]">
-        <div class="flex items-center w-full max-w-[368px] min-w-[240px] relative">
+        <div
+          id="profile1"
+          class="flex items-center w-full max-w-[368px] min-w-[240px] relative transition-all duration-500 opacity-0 animate__animated"
+        >
           <nuxt-img
             :class="['w-full object-contain transition-opacity duration-500', 'hover:opacity-0']"
             src="/images/homepage/profile1.png"
@@ -16,7 +19,10 @@
         </div>
       </div>
       <div class="flex flex-col gap-10 justify-center w-full min-w-[260px]">
-        <div class="max-w-[368px] relative">
+        <div
+          id="profile2"
+          class="max-w-[368px] relative transition-all duration-500 opacity-0 animate__animated"
+        >
           <nuxt-img
             :class="['w-full object-contain transition-opacity duration-500', 'hover:opacity-0']"
             src="/images/homepage/profile2.png"
@@ -28,7 +34,10 @@
             alt="profile2-alt"
           />
         </div>
-        <div class="max-w-[518px] relative">
+        <div
+          id="profile3"
+          class="max-w-[518px] relative transition-all duration-500 opacity-0 animate__animated"
+        >
           <nuxt-img
             :class="['w-full object-contain transition-opacity duration-500', 'hover:opacity-0']"
             src="/images/homepage/profile3.png"
@@ -51,10 +60,10 @@
           <h2 class="mr-[7.6px]">angchuan</h2>
         </div>
       </h2>
-      <div class="text-2xl text-secondary font-light font-poppins text-right mt-10">
-        A junior designer who loves reading, doodling, collecting stickers — and yes, playing games.
-        These passions inspire me to explore new ideas, build meaningful connections with people,
-        and craft UX designs that bring joy through the thoughtful little details I put into every
+      <div class="text-xl text-secondary font-light font-poppins text-right mt-10">
+        A designer who loves reading, doodling, collecting stickers — and yes, playing games. These
+        passions inspire me to explore new ideas, build meaningful connections with people, and
+        craft UX designs that bring joy through the thoughtful little details I put into every
         project.
 
         <div class="size-[400px] relative mt-20">
@@ -103,4 +112,29 @@ const handleScroll = () => {
   rotateFlower.value.style.transform = `rotate(${newRotation}deg)`
   lastScrollY.value = currentScrollY
 }
+
+const activeIntersection = () => {
+  const profile1 = document.querySelector('#profile1')
+  const profile2 = document.querySelector('#profile2')
+  const profile3 = document.querySelector('#profile3')
+
+  if (profile1) {
+    profile1.classList.add('opacity-100')
+    profile1.classList.add('animate__fadeInUp')
+  }
+
+  if (profile2) {
+    profile2.classList.add('opacity-100')
+    profile2.classList.add('animate__fadeInUp')
+  }
+
+  if (profile3) {
+    profile3.classList.add('opacity-100')
+    profile3.classList.add('animate__fadeInUp')
+  }
+}
+
+defineExpose({
+  activeIntersection,
+})
 </script>

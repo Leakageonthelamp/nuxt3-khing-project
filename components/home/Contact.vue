@@ -5,7 +5,9 @@
       contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's
     </h2>
 
-    <div class="w-full relative [&:hover_.outer-card]:opacity-0 [&:hover_.inter-text]:z-10">
+    <div
+      class="w-full relative [&:hover_.outer-card]:opacity-0 [&:hover_.inner-text]:z-10 [&:hover_.inner-text]:opacity-100"
+    >
       <div class="px-10 z-10 outer-card transition-opacity duration-500">
         <nuxt-img class="size-full" src="/images/homepage/envelope.png" alt="envelope" />
       </div>
@@ -20,12 +22,18 @@
           <p class="font-poppins font-extralight">kotchagorn.angchuan@gmail.com</p>
         </div>
         <nuxt-link to="https://www.linkedin.com/in/ginger-kotchagorn/" target="_blank">
-          <p class="text-light text-[64px] font-poppins leading-none">linkedin</p>
+          <p class="text-light text-[48px] font-poppins underline leading-none hover:text-primary">
+            linkedin
+          </p>
         </nuxt-link>
       </div>
 
-      <div class="absolute z-[-1] top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 inter-text">
-        <nuxt-link to="/resume" class="flex flex-col items-center -rotate-[2deg]">
+      <div class="absolute z-[-1] top-[30%] left-1/2 -translate-x-1/2 -translate-y-1/2 inner-text">
+        <nuxt-link
+          to="/file/resume.pdf"
+          target="_blank"
+          class="flex flex-col items-center -rotate-[2deg]"
+        >
           <h1 class="text-[8vw] 2xl:text-[128px] whitespace-nowrap">
             read my <span class="text-primary">resume</span>
           </h1>

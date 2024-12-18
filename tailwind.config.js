@@ -18,7 +18,7 @@ module.exports = {
     extend: {
       cursor: {
         'hover-work': 'url(/mouse-icon.svg), pointer',
-        'hover-work-spin': 'url(/mouse-icon.gif), auto',
+        'hover-alt': 'url(/mouse-hover.png), pointer',
       },
       animation: {
         'spin-slow': 'spin 4s linear infinite',
@@ -44,6 +44,7 @@ module.exports = {
         white: '#FFFFFF',
         dark: {
           DEFAULT: '#0E0F52',
+          night: '#131457',
         },
         light: {
           DEFAULT: '#F4E6DB',
