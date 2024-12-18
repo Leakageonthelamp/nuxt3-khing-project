@@ -56,14 +56,9 @@ import HomeProfile from '@/components/home/Profile.vue'
 
 const route = useRoute()
 
-const nameSet = ref(['ginger', 'ขิง'])
+const nameSet = ref(['ginger', 'ขิง', 'khing'])
 const displayText = ref(nameSet.value[0])
 const isActiveWorks = ref(false)
-
-const showSection1 = ref(false)
-const showSection2 = ref(false)
-const showSection3 = ref(false)
-const showSection4 = ref(false)
 
 const currentIntersection = ref<string>('')
 const profileRef = ref<InstanceType<typeof HomeProfile> | null>(null)
@@ -71,8 +66,6 @@ const profileRef = ref<InstanceType<typeof HomeProfile> | null>(null)
 const slug = computed(() => route.query.slug || 'home')
 
 onMounted(() => {
-  activeIntersection()
-
   setInterval(() => {
     eraseText(100)
     setTimeout(() => {
@@ -85,16 +78,7 @@ onMounted(() => {
     handleScrollTo(slug.value as string)
   }, 500)
 
-  showSection1.value = true
-  setTimeout(() => {
-    showSection2.value = true
-  }, 300)
-  setTimeout(() => {
-    showSection3.value = true
-  }, 600)
-  setTimeout(() => {
-    showSection4.value = true
-  }, 900)
+  activeIntersection()
 })
 
 const handleScrollTo = (slug: string) => {
