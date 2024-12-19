@@ -2,7 +2,7 @@
   <div>
     <h1 class="text-4xl text-totiw-blue">Research the Problem</h1>
     <div class="mt-6 flex flex-col gap-8">
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div class="flex flex-col gap-4">
           <p>I start with students from different faculties and universities.</p>
           <p>
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <img class="w-full" src="/images/works/totiw/research2.png" alt="research-2" />
         </div>

@@ -41,7 +41,7 @@
               <div
                 v-for="item in navbarInfo"
                 :key="item.name"
-                class="text-light hover:text-primary font-mogent text-[120px] hover:scale-110 transition-all duration-300 leading-[1] cursor-pointer"
+                class="text-light hover:text-primary font-mogent text-[80px] md:text-[120px] hover:scale-110 transition-all duration-300 leading-[1] cursor-pointer"
                 @click="handleNavigate(item.goTo)"
               >
                 {{ item.name }}
@@ -68,7 +68,7 @@
       <slot />
     </main>
     <div class="footer">
-      <h5 class="text-gray-300 text-xs">© ginger kotchagorn 2024</h5>
+      <h5 class="text-secondary text-xs">© ginger kotchagorn 2024</h5>
     </div>
   </div>
 </template>
@@ -135,6 +135,6 @@ const handleNavigate = (slug: string) => {
 }
 
 .footer {
-  @apply absolute bottom-0 bg-transparent w-full text-center py-6 z-[100];
+  @apply absolute bottom-0 bg-transparent w-full text-center py-4 md:py-6 z-[100];
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
-  <div class="py-20">
+  <div class="py-10 md:py-20">
     <div class="flex flex-col items-center">
       <h2
         :class="[
-          'text-[96px] transition-all duration-1000',
+          'text-[60px] md:text-[96px] transition-all duration-1000',
           isActiveWorks ? 'text-light' : 'text-black',
         ]"
       >
@@ -11,7 +11,7 @@
       </h2>
       <p
         :class="[
-          'font-light font-poppins text-center transition-all duration-1000',
+          'font-light font-poppins text-sm md:text-base text-center transition-all duration-1000',
           isActiveWorks ? 'text-light' : 'text-black',
         ]"
       >
@@ -20,7 +20,7 @@
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-20 mt-10 px-32">
+    <div class="grid grid-cols-1 gap-10 md:gap-20 mt-10 md:px-32">
       <div
         v-for="(project, index) in projects"
         :key="project.title"
@@ -122,4 +122,15 @@ const { stop } = useIntersectionObserver(
   },
   { threshold: 0.3 }
 )
+
+const manualActive = () => {
+  console.log('manualActive')
+  projects.value.forEach((project) => {
+    project.isShow = true
+  })
+}
+
+defineExpose({
+  manualActive,
+})
 </script>

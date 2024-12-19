@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <div class="flex gap-16">
+      <div class="flex flex-col md:flex-row gap-4 md:gap-16">
         <h1 class="text-4xl text-hra">Define</h1>
         <p>
           The research showed that the screening process is too slow, and many people do not

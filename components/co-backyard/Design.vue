@@ -2,7 +2,7 @@
   <section>
     <h1 class="text-4xl text-cby">Visual Design</h1>
 
-    <div class="grid grid-cols-2 gap-10 mt-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-6">
       <div>
         <h1 class="text-3xl text-cby">"Growing Happiness Together in a Relaxing Garden"</h1>
         <p class="mt-6">
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-2 gap-10 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
       <div class="flex flex-col justify-center">
         <img
           src="/images/works/co-backyard/design4.png"

@@ -3,7 +3,7 @@
     <h1 class="text-4xl text-hra">Wireframe</h1>
 
     <section class="mt-6">
-      <div class="grid grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <p>Wireframe phase began with dividing the design into five parts:</p>
           <img src="/images/works/hra/wireframe1.png" alt="wireframe-1" class="w-full my-4" />

@@ -19,7 +19,7 @@
 
       <img src="/images/works/healthflow/define2.png" alt="define-2" class="w-full mt-4" />
 
-      <div class="grid grid-cols-2 gap-10 mt-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
         <div class="flex flex-col justify-between">
           <div>
             <h1 class="text-healthflow text-4xl">Spaghetti mapping</h1>

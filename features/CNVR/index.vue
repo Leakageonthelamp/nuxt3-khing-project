@@ -11,7 +11,7 @@
       />
     </div>
 
-    <div class="homepage-body px-20 py-16">
+    <div class="homepage-body px-4 md:px-20 py-8 md:py-16">
       <div class="body-section grid grid-cols-12">
         <div class="col-start-1 col-end-3 hidden lg:block relative">
           <div class="w-full sticky top-24 inline-grid gap-2">
@@ -31,31 +31,31 @@
             <ProjectOverview />
           </section>
 
-          <div class="divider my-16" />
+          <div class="divider my-8 md:my-16" />
 
           <section id="research">
             <Research />
           </section>
 
-          <div class="divider my-16" />
+          <div class="divider my-8 md:my-16" />
 
           <section id="define">
             <Define />
           </section>
 
-          <div class="divider my-16" />
+          <div class="divider my-8 md:my-16" />
 
           <section id="ideate">
             <Ideate />
           </section>
 
-          <div class="divider my-16" />
+          <div class="divider my-8 md:my-16" />
 
           <section id="final">
             <Final />
           </section>
 
-          <div class="divider my-16" />
+          <div class="divider my-8 md:my-16" />
 
           <section id="outcome">
             <Outcome />
@@ -63,7 +63,7 @@
         </div>
       </div>
 
-      <div class="w-full flex items-center justify-center mt-20 mb-10">
+      <div class="w-full flex items-center justify-center mt-10 md:mt-20 mb-10">
         <p class="text-sm">
           If you like this project,
           <nuxt-link to="/?slug=contact">

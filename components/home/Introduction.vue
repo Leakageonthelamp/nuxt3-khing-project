@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b border-black pt-60">
+  <div class="border-b border-black pt-20 md:pt-60">
     <nuxt-img
       src="/images/homepage/comp.gif"
       class="w-full"
@@ -8,8 +8,8 @@
       :placeholder-blur="10"
     />
 
-    <div class="mt-24 mb-10">
-      <div class="leading-normal font-poppins">
+    <div class="mt-10 md:mt-24 mb-4 md:mb-10">
+      <div class="leading-normal font-poppins text-sm md:text-base">
         I using <span class="font-mogent text-primary tracking-wider">design thinking</span> to
         create products - talk with users, find their needs, brainstorm<br />
         solutions, design prototypes, and test them. This iterative cycle ensures I'm constantly<br />
@@ -17,7 +17,7 @@
         and delightful to use.
       </div>
       <div class="flex justify-end">
-        <em class="ic ic-flower size-[148px] text-secondary" />
+        <em class="ic ic-flower size-[60px] md:size-[148px] text-secondary" />
       </div>
     </div>
   </div>

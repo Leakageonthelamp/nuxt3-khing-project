@@ -13,7 +13,7 @@
         learned about the challenges they face in managing and implementing the program effectively.
       </p>
 
-      <div class="grid grid-cols-2 gap-6 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
         <img src="/images/works/cnvr/define1.png" alt="define-1" class="w-full" />
         <img src="/images/works/cnvr/define2.png" alt="define-2" class="w-full" />
       </div>
@@ -23,7 +23,7 @@
 
     <section>
       <h1 class="text-4xl text-cnvr">Journey Map</h1>
-      <div class="grid grid-cols-2 gap-6 mt-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
         <div class="flex flex-col">
           <img
             src="/images/works/cnvr/define3.png"
@@ -55,7 +55,7 @@
     <div class="divider my-10" />
 
     <section>
-      <div class="grid grid-cols-3 gap-16">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-16">
         <img src="/images/works/cnvr/define5.png" alt="define-5" class="w-full" />
 
         <div class="col-span-2 flex flex-col justify-center">

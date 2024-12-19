@@ -1,38 +1,45 @@
 <template>
   <div class="homepage scroll-container" id="home">
     <div class="header">
-      <div class="h-screen w-full bg-primary flex flex-col p-9">
+      <div class="h-screen w-full bg-primary flex flex-col p-4 md:p-9">
         <div class="flex flex-col items-center justify-center flex-grow leading-none h-screen">
           <div class="animate__animated animate__fadeInUp">
-            <em class="ic ic-flower size-[132px] text-light animate-spin-slow mb-10" />
+            <em
+              class="ic ic-flower size-[60px] md:size-[132px] text-light animate-spin-slow mb-10"
+            />
           </div>
 
           <div class="animate__animated animate__fadeInUp animate__delay-0.5s">
-            <h1 class="text-[180px] text-light min-h-[180px]">
+            <h1 class="text-[80px] md:text-[180px] text-light min-h-[100px] md:min-h-[180px]">
               {{ displayText }}
             </h1>
           </div>
 
           <div class="animate__animated animate__fadeInUp animate__delay-1s">
-            <h1 class="text-[180px]">Kotchagorn</h1>
+            <h1 class="text-[80px] md:text-[180px]">Kotchagorn</h1>
           </div>
         </div>
         <div class="flex items-center justify-between">
-          <h5 class="font-poppins text-light text-2xl">UXUI Designer</h5>
-          <h5 class="font-poppins text-2xl">scroll to see more</h5>
+          <h5 class="font-poppins text-light text-base md:text-2xl">UXUI Designer</h5>
+          <h5 class="font-poppins text-base md:text-2xl cursor-pointer">scroll to see more</h5>
         </div>
       </div>
     </div>
 
     <div class="homepage-body">
-      <section id="bodySection" class="body-section pb-16">
-        <section class="px-10" id="introduction">
+      <section id="bodySection" class="body-section pb-10 md:pb-16">
+        <section class="px-4 md:px-10" id="introduction">
           <HomeIntroduction />
         </section>
 
         <section class="transition-all duration-1000" id="works">
           <transition name="slide-up" mode="out-in">
-            <HomeSelectedWork v-if="isActiveWorks" class="px-10" :is-active-works="isActiveWorks" />
+            <HomeSelectedWork
+              ref="selectedWorkRef"
+              v-if="isActiveWorks"
+              class="px-4 md:px-10"
+              :is-active-works="isActiveWorks"
+            />
             <div v-else class="w-full h-[200vh] bg-light" />
           </transition>
         </section>
@@ -53,6 +60,7 @@
 import VueScrollTo from 'vue-scrollto'
 
 import HomeProfile from '@/components/home/Profile.vue'
+import HomeSelectedWork from '@/components/home/SelectedWork.vue'
 
 const route = useRoute()
 
@@ -61,7 +69,9 @@ const displayText = ref(nameSet.value[0])
 const isActiveWorks = ref(false)
 
 const currentIntersection = ref<string>('')
+
 const profileRef = ref<InstanceType<typeof HomeProfile> | null>(null)
+const selectedWorkRef = ref<InstanceType<typeof HomeSelectedWork> | null>(null)
 
 const slug = computed(() => route.query.slug || 'home')
 
@@ -82,6 +92,13 @@ onMounted(() => {
 })
 
 const handleScrollTo = (slug: string) => {
+  if (slug === 'works') {
+    isActiveWorks.value = true
+    setTimeout(() => {
+      selectedWorkRef.value?.manualActive()
+    }, 1300)
+  }
+
   VueScrollTo.scrollTo(`#${slug}`, 500, { offset: 0 })
 }
 

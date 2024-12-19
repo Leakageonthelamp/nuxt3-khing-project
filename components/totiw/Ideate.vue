@@ -21,8 +21,8 @@
     <div class="divider my-10" />
 
     <section id="flow">
-      <div class="flex">
-        <div class="max-w-[240px]">
+      <div class="flex flex-col md:flex-row">
+        <div class="md:max-w-[240px]">
           <h2 class="text-totiw-blue text-4xl whitespace-nowrap">Simplified flow</h2>
           <p class="mt-6">
             for easy understanding. If you're interested in viewing the full version (in Thai),
@@ -57,7 +57,7 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-2 gap-6 mt-10 px-14">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 md:px-14">
         <div>
           <img class="w-full" src="/images/works/totiw/ideate3.png" alt="ideate-pic-3" />
           <p class="text-totiw-blue text-sm">Metric form images from old magazines</p>
@@ -80,7 +80,7 @@
           led to the creation of a final concept.
         </p>
         <img
-          class="w-full px-14 mt-6"
+          class="w-full md:px-14 mt-6"
           src="/images/works/totiw/ideate5.png"
           alt="ideate-skecthing"
         />

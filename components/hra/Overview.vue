@@ -14,18 +14,18 @@
         designed wireframes for the proposed system.
       </p>
 
-      <div class="grid grid-cols-12 divide-x-1 divide-black">
-        <div class="col-span-3 space-y-2 pr-4">
+      <div class="grid grid-cols-1 md:grid-cols-12 md:divide-x-1 divide-black gap-4 md:gap-0">
+        <div class="col-span-1 md:col-span-3 space-y-2 md:pr-4">
           <h5 class="text-2xl font-normal text-hra">Duration</h5>
           <p>1 Year 4 Months</p>
         </div>
 
-        <div class="col-span-3 space-y-2 px-4">
+        <div class="col-span-1 md:col-span-3 space-y-2 md:px-4">
           <h5 class="text-2xl font-normal text-hra">Tool</h5>
           <p>figma, figjam ,paper and pen</p>
         </div>
 
-        <div class="col-span-6 space-y-2 pl-4">
+        <div class="col-span-1 md:col-span-6 space-y-2 md:pl-4">
           <h5 class="text-2xl font-normal text-hra">Methods</h5>
           <p>
             User Interviews and observe, Journey Mapping, ideation, Brainstorming Sessions,
@@ -36,10 +36,10 @@
     </div>
   </section>
 
-  <div class="divider my-10" />
+  <div class="divider my-8 md:my-10" />
 
   <section>
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <img src="/images/works/hra/overview1.png" alt="overview-1" class="w-full" />
 
       <div>

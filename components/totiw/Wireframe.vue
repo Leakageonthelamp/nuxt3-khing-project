@@ -10,7 +10,7 @@
         design.
       </p>
 
-      <div class="mt-10 px-14">
+      <div class="mt-10 md:px-14">
         <img
           class="w-full object-contain"
           src="/images/works/totiw/wireframe1.png"

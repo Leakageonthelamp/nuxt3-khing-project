@@ -1,6 +1,9 @@
 <template>
-  <div class="pt-10 flex flex-col items-center overflow-hidden">
-    <h2 ref="scrollText" class="text-[120px] text-secondary whitespace-nowrap -ml-40">
+  <div class="pt-6 md:pt-10 flex flex-col items-center overflow-hidden">
+    <h2
+      ref="scrollText"
+      class="text-[60px] md:text-[120px] text-secondary whitespace-nowrap -ml-40"
+    >
       Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's
       contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's contact-Let's
     </h2>
@@ -8,21 +11,23 @@
     <div
       class="w-full relative [&:hover_.outer-card]:opacity-0 [&:hover_.inner-text]:z-10 [&:hover_.inner-text]:opacity-100"
     >
-      <div class="px-10 z-10 outer-card transition-opacity duration-500">
+      <div class="px-4 md:px-10 z-10 outer-card transition-opacity duration-500">
         <nuxt-img class="size-full" src="/images/homepage/envelope.png" alt="envelope" />
       </div>
 
-      <div class="absolute inset-0 px-10 z-[-1]">
+      <div class="absolute inset-0 px-4 md:px-10 z-[-1]">
         <nuxt-img class="size-full" src="/images/homepage/envelope-open.png" alt="envelope-open" />
       </div>
 
-      <div class="flex items-end justify-between z-20 px-20 pb-10">
-        <div class="text-light text-xl tracking-wide">
+      <div class="flex items-end justify-between z-20 px-6 md:px-20 pb-4 md:pb-10">
+        <div class="text-light text-xs md:text-xl tracking-wide">
           <p class="font-poppins font-extralight">097-2965927</p>
           <p class="font-poppins font-extralight">kotchagorn.angchuan@gmail.com</p>
         </div>
         <nuxt-link to="https://www.linkedin.com/in/ginger-kotchagorn/" target="_blank">
-          <p class="text-light text-[48px] font-poppins underline leading-none hover:text-primary">
+          <p
+            class="text-light text-[24px] md:text-[48px] font-poppins underline leading-none hover:text-primary"
+          >
             linkedin
           </p>
         </nuxt-link>

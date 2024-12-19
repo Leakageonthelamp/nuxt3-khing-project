@@ -11,7 +11,7 @@
         the screening process
       </p>
 
-      <div class="mt-6 grid grid-cols-2 gap-4">
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div>
           <img src="/images/works/hra/ideate1.png" alt="ideate-1" class="w-full" />
           <p class="text-hra text-sm">Brainstorming workshop in figjam</p>
@@ -48,7 +48,7 @@
         more suitable for patients, helping to address their unique needs effectively.
       </p>
 
-      <div class="mt-10 grid grid-cols-2 gap-6">
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         <img src="/images/works/hra/ideate6.png" alt="ideate-6" class="w-full" />
         <img src="/images/works/hra/ideate7.png" alt="ideate-7" class="w-full" />
       </div>

@@ -2,7 +2,7 @@
   <div>
     <h1 class="text-cnvr text-4xl">Observation and interview</h1>
 
-    <div class="grid grid-cols-3 gap-4 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
       <div class="bg-white rounded-2xl px-4 py-8">
         <h1 class="text-4xl">8 Persons</h1>
         <p class="text-cnvr-secondary text-xl mt-2">interview</p>
@@ -25,7 +25,7 @@
       nearby floating market. I will interview residents and observe the situation to learn more.
     </p>
 
-    <div class="grid grid-cols-2 gap-4 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-10">
       <div>
         <img
           src="/images/works/cnvr/research1.png"

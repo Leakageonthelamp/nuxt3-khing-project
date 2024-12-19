@@ -1,8 +1,13 @@
 <template>
   <div>
     <h1 class="text-healthflow text-4xl">Interview</h1>
-    <div class="mt-4 grid grid-cols-4 gap-4 divide-x-2 divide-gray-200">
-      <div v-for="item in listCard" class="flex items-center justify-center space-x-4 px-4 py-8">
+    <div
+      class="mt-4 grid grid-cols-1 md:grid-cols-4 gap-4 divide-y-2 md:divide-y-0 md:divide-x-2 divide-gray-200"
+    >
+      <div
+        v-for="item in listCard"
+        class="flex items-center justify-center space-x-4 px-2 md:px-4 py-4 md:py-8"
+      >
         <h5 class="text-healthflow-secondary font-bold text-4xl">{{ item.description }}</h5>
         <p v-html="item.title" class="w-fit"></p>
       </div>
@@ -12,7 +17,7 @@
       <img src="/images/works/healthflow/interview1.png" alt="interview" />
     </div>
 
-    <div class="grid grid-cols-2 gap-10 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
       <div>
         <h5 class="text-2xl text-healthflow-secondary font-medium">Objective</h5>
         <ul class="list-disc text-healthflow-secondary ml-6 mt-4 flex flex-col gap-1">

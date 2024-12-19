@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="grid grid-cols-2 gap-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
       <div>
         <h1 class="text-4xl text-cby">Ideate</h1>
         <h2 class="text-3xl text-cby-secondary mt-4">Paradigm Shifting : Thod Phapa ceremony</h2>
@@ -30,7 +30,7 @@
       paradigm shift.
     </p>
 
-    <div class="grid grid-cols-2 gap-10 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
       <div>
         <img src="/images/works/co-backyard/ideate2.png" alt="ideate-2" class="w-full" />
         <p class="text-cby text-sm">Thod Pha Pa Ceremony Journey Map</p>

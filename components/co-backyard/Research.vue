@@ -2,7 +2,7 @@
   <section>
     <h1 class="text-4xl text-cby">Research</h1>
 
-    <div class="grid grid-cols-2 gap-10 mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
       <img src="/images/works/co-backyard/research1.png" alt="research-1" class="w-full" />
       <div class="flex flex-col justify-between">
         <div>
@@ -46,7 +46,7 @@
       <img
         src="/images/works/co-backyard/research2.png"
         alt="research-2"
-        class="w-full mt-10 px-20"
+        class="w-full mt-10 md:px-20"
       />
     </div>
   </section>

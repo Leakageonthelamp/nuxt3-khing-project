@@ -2,8 +2,8 @@
   <div>
     <h1 class="text-cnvr text-4xl">Ideate</h1>
 
-    <div class="mt-6 flex space-x-10">
-      <div class="flex-[40%] flex flex-col justify-between">
+    <div class="mt-6 flex flex-col md:flex-row space-x-10">
+      <div class="flex-[100%] md:flex-[40%] flex flex-col justify-between">
         <div>
           <h1 class="text-cnvr text-3xl">Dogs are our best friend!</h1>
           <p class="mt-6">
@@ -13,13 +13,17 @@
           </p>
         </div>
 
-        <img src="/images/works/cnvr/ideate1.png" alt="ideate-1" class="max-w-[80%] ml-10 mt-20" />
+        <img
+          src="/images/works/cnvr/ideate1.png"
+          alt="ideate-1"
+          class="max-w-[80%] ml-5 md:ml-10 mt-10 md:mt-20"
+        />
       </div>
 
-      <div class="flex-[60%] flex flex-col justify-between">
+      <div class="flex-[100%] md:flex-[60%] flex flex-col justify-between">
         <img src="/images/works/cnvr/ideate2.png" alt="ideate-2" class="w-full" />
 
-        <div class="flex items-end justify-end">
+        <div class="flex items-end justify-end mt-10 md:mt-0">
           <div>
             <h1 class="text-cnvr text-3xl">
               CNVR Invitation <br />
@@ -42,7 +46,7 @@
     <h1 class="text-cnvr text-4xl mt-10">Final Sketch</h1>
     <img src="/images/works/cnvr/ideate4.png" alt="ideate-4" class="w-full mt-4" />
 
-    <div class="mt-10 grid grid-cols-2 gap-4">
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="flex items-center">
         <div>
           <h1 class="text-cnvr text-3xl">The Vaccination Kit for Dog Friends</h1>

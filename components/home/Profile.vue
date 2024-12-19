@@ -1,6 +1,8 @@
 <template>
-  <div class="flex gap-20 justify-between py-20 px-10 overflow-hidden">
-    <div id="profile" class="w-full flex gap-10">
+  <div
+    class="flex flex-wrap md:flex-nowrap gap-10 md:gap-20 justify-between py-10 md:py-20 px-4 md:px-10 overflow-hidden"
+  >
+    <div id="profile" class="w-full flex flex-wrap md:flex-nowrap gap-10">
       <div class="flex justify-center w-full max-w-[368px]">
         <div
           id="profile1"
@@ -52,24 +54,26 @@
       </div>
     </div>
 
-    <div class="w-[600px] mt-4">
-      <h2 class="text-[128px] leading-[0.72]">
+    <div class="w-full md:w-[600px] mt-4">
+      <h2 class="text-[80px] md:text-[128px] leading-[0.72]">
         Kotchagorn
-        <div class="flex items-center justify-between">
-          <span><em class="ic ic-flower size-[70px]" /></span>
-          <h2 class="mr-[7.6px]">angchuan</h2>
+        <div class="flex items-center md:justify-between">
+          <span><em class="ic ic-flower size-[40px] md:size-[70px]" /></span>
+          <h2 class="ml-3 md:mr-[7.6px]">angchuan</h2>
         </div>
       </h2>
-      <div class="text-xl text-secondary font-light font-poppins text-right mt-10">
+      <div
+        class="text-sm md:text-xl text-secondary font-light font-poppins text-right mt-6 md:mt-10"
+      >
         A designer who loves reading, doodling, collecting stickers — and yes, playing games. These
         passions inspire me to explore new ideas, build meaningful connections with people, and
         craft UX designs that bring joy through the thoughtful little details I put into every
         project.
 
-        <div class="size-[400px] relative mt-20">
+        <div class="size-[200px] md:size-[400px] relative mt-20">
           <em
             ref="rotateFlower"
-            class="ic ic-flower size-[400px] text-primary absolute -right-[25rem]"
+            class="ic ic-flower size-[200px] md:size-[400px] text-primary absolute -right-[18rem] md:-right-[25rem]"
           />
         </div>
       </div>

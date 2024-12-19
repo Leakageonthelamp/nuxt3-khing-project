@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-10">
-    <div class="grid grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
         <h1 class="text-4xl text-hra">Interview</h1>
         <h2 class="text-3xl mt-4 text-hra-secondary">Public health Staff</h2>
