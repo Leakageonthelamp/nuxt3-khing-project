@@ -1,8 +1,10 @@
 <template>
   <div class="homepage scroll-container" id="home">
     <div class="header">
-      <div class="h-screen w-full bg-primary flex flex-col p-4 md:p-9">
-        <div class="flex flex-col items-center justify-center flex-grow leading-none h-screen">
+      <div class="w-full bg-primary h-screen flex flex-col p-4 md:p-9">
+        <div
+          class="flex flex-col items-center justify-end md:justify-center flex-grow leading-none h-1/2 md:h-screen"
+        >
           <div class="animate__animated animate__fadeInUp">
             <em
               class="ic ic-flower size-[60px] md:size-[132px] text-light animate-spin-slow mb-10"
@@ -19,7 +21,19 @@
             <h1 class="text-[80px] md:text-[180px]">Kotchagorn</h1>
           </div>
         </div>
-        <div class="flex items-center justify-between">
+
+        <div class="flex md:hidden flex-col items-center justify-between h-1/2 pb-10 mt-6">
+          <h5 class="font-poppins font-extralight text-light text-xl md:text-2xl">UXUI Designer</h5>
+          <div>
+            <h5 class="text-base text-light font-poppins font-extralight">
+              Best viewed on Desktop <br />
+              for the best experience!
+            </h5>
+            <h5 class="font-poppins text-xl md:text-2xl cursor-pointer mt-6">scroll to see more</h5>
+          </div>
+        </div>
+
+        <div class="items-center justify-between hidden md:flex">
           <h5 class="font-poppins text-light text-base md:text-2xl">UXUI Designer</h5>
           <h5 class="font-poppins text-base md:text-2xl cursor-pointer">scroll to see more</h5>
         </div>
